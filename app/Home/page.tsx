@@ -5,13 +5,14 @@ import { RightArrow, DocumentIcon } from '../Icons/icons';
 
 export default function HomePage() {
     const router = useRouter();
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
     const buttons = [
         { label: 'Skills/Experience', href: '/Skills-Experience', icon: <RightArrow /> },
         { label: 'Projects', href: '/Projects', icon: <RightArrow /> },
         { label: 'Contact', href: '/Contact', icon: <RightArrow /> },
         {
             label: 'Download Resume',
-            href: '/JF-Resume.pdf',
+            href: `${basePath}/JF-Resume.pdf`,
             icon: <DocumentIcon />,
             download: true,
         },
