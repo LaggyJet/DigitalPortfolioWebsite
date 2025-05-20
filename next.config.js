@@ -1,8 +1,8 @@
-const isProd = process.env.NODE_ENV === 'production';
+const isGithubPages = process.env.DEPLOY_ENV === 'GH_PAGES';
 
 module.exports = {
     output: 'export',
-    basePath: isProd ? '/DigitalPortfolioWebsite' : '',
-    assetPrefix: isProd ? '/DigitalPortfolioWebsite/' : '',
+    basePath: isGithubPages ? '/DigitalPortfolioWebsite' : '',
+    assetPrefix: isGithubPages ? '/DigitalPortfolioWebsite/' : '',
     images: { unoptimized: true },
 };
