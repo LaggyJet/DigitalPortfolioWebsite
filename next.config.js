@@ -1,14 +1,16 @@
-const isGithubPages = process.env.DEPLOY_ENV === 'GH_PAGES';
-const basePathValue = isGithubPages ? '/DigitalPortfolioWebsite' : '';
+const repoName = 'DigitalPortfolioWebsite';
+const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
+const basePath = isGithubActions ? `/${repoName}` : '';
+const assetPrefix = isGithubActions ? `/${repoName}/` : './';
 
 module.exports = {
     output: 'export',
-    basePath: basePathValue,
-    assetPrefix: basePathValue,
+    basePath,
+    assetPrefix,
     images: {
         unoptimized: true,
     },
     env: {
-        NEXT_PUBLIC_BASE_PATH: basePathValue,
+        NEXT_PUBLIC_BASE_PATH: basePath,
     },
 };
