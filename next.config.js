@@ -5,8 +5,8 @@ const assetPrefix = isGithubActions ? `/${repoName}/` : './';
 
 module.exports = {
     output: 'export',
-    basePath,
-    assetPrefix,
+    basePath: basePath,
+    assetPrefix: assetPrefix,
     images: {
         unoptimized: true,
     },
