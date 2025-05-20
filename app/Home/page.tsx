@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { RightArrow, DocumentIcon } from '../Icons/icons';
+import { RightArrow, DocumentIcon } from '../Shared/icons';
 
 export default function HomePage() {
     const router = useRouter();
@@ -12,7 +12,7 @@ export default function HomePage() {
         { label: 'Contact', href: '/Contact', icon: <RightArrow /> },
         {
             label: 'Download Resume',
-            href: `${basePath}/JF-Resume.pdf`,
+            href: '/JF-Resume.pdf',
             icon: <DocumentIcon />,
             download: true,
         },
@@ -21,7 +21,7 @@ export default function HomePage() {
         <div className="container">
             <h1 className="title">Joshua Furber</h1>
             <p className="description">
-                I am a Simulation and Visualization student at Full Sail University.
+                I am a Simulation and Visualization Engineering student at Full Sail University.
             </p>
             <div className="buttonRow">
                 {buttons.map(({ label, href, icon, download }) =>

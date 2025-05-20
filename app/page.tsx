@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 export default function RedirectToHome() {
     const router = useRouter();
     useEffect(() => {
-        router.replace('/Home');
+        router.replace('/');
     }, [router]);
     return null;
 }

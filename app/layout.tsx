@@ -9,7 +9,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 <div
                     className="background"
                     style={{
-                    backgroundImage: `url(${basePath}/MainBackground.png)`,
+                    backgroundImage: '/MainBackground.png',
                     }}
                 >
                     {children}

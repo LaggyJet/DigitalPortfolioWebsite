@@ -2,20 +2,20 @@
 
 import styles from './contact.module.css';
 import { useRouter } from 'next/navigation';
-import { LeftArrow, GitHubIcon, LinkedInIcon } from '../Icons/icons';
+import { LeftArrow, GitHubIcon, LinkedInIcon } from '../Shared/icons';
 
 export default function ContactPage() {
     const router = useRouter();
     return (
-        <div className={styles.container}>
-            <button className={styles.backButton} onClick={() => router.back()}>
+        <div className="container">
+            <button className="backButton" onClick={() => router.back()}>
                 <LeftArrow />
                 Back
             </button>
-            <h1 className={styles.title}>Contact</h1>
-            <p className={styles.description}>
+            <h1 className="title">Contact</h1>
+            <p className="description">
                 Feel free to reach out at my{' '}
-                <a href="mailto:jfurber404@gmail.com" className={styles.emailLink}>
+                <a href="mailto:jfurber404@gmail.com" className="link">
                     email
                 </a>{' '}
                 or my LinkedIn below.

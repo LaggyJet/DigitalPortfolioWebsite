@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { LeftArrow } from '../Icons/icons';
+import { LeftArrow } from '../Shared/icons';
 
 export default function SkillsExperiencePage() {
     const router = useRouter();
