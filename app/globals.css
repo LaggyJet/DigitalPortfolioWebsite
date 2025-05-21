@@ -53,7 +53,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeIn 4.5s ease-out both;
+    animation: fadeIn 2s ease-out both;
 }
 
 .container {
@@ -67,7 +67,7 @@ body {
     box-sizing: border-box;
     max-width: min(90vw, 900px);
     margin: 0 auto;
-    animation: fadeIn 4.5s ease-out both;
+    animation: fadeIn 2s ease-out both;
     animation-delay: 0.4s;
 }
 
@@ -76,7 +76,7 @@ body {
     font-size: clamp(1.5rem, 2.5vw, 2.5rem);
     margin-bottom: 1.25vw;
     line-height: 1.2;
-    animation: fadeIn 4.5s ease-out both;
+    animation: fadeIn 2s ease-out both;
     animation-delay: 0.5s;
 }
 
@@ -86,7 +86,7 @@ body {
     max-width: min(60vw, 600px);
     margin-bottom: 2vw;
     line-height: 1.4;
-    animation: fadeIn 4.5s ease-out both;
+    animation: fadeIn 2s ease-out both;
     animation-delay: 0.6s;
 }
 
