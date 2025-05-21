@@ -2,13 +2,13 @@
     background: none;
     border: none;
     cursor: pointer;
-    padding: 1vh;
-    z-index: 1001;
+    padding: 1vw;
+    z-index: 1000;
 }
 
 .icon {
-    width: min(2.2vw, 32px);
-    height: min(2.2vw, 32px);
+    width: min(2.5vw, 32px);
+    height: min(2.5vw, 32px);
     stroke: #B094FF;
     transition: stroke 0.2s ease;
 }
