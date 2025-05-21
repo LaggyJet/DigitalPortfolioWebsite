@@ -1,54 +1,38 @@
+@tailwind utilities;
+
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 6.5vh;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    padding: 1vw 1.5vh;
+    @apply fixed top-0 left-0 w-full min-h-[6.5vh] bg-black/80 flex items-center justify-center z-[1000] px-[1vw] py-[1.5vh];
 }
 
 .navContent {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    gap: 1.2vw;
+    @apply w-full flex justify-end gap-[1.2vw];
 }
 
 .active {
-    background-color: #D5C7FF;
-    color: black;
-    border-color: #D5C7FF;
+    @apply bg-[#D5C7FF] text-black border border-[#D5C7FF];
 }
 
 .homeIcon {
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    vertical-align: middle;
+    @apply w-6 h-6 inline-block align-middle;
 }
 
 @media (max-width: 600px) {
     .header {
-        height: 8vh;
-        padding: 0 3vw;
-        justify-content: space-between;
+        @apply h-[8vh] justify-between px-[3vw];
     }
 
     .navContent {
-        max-width: 100%;
-        padding: 0 1vw;
-        gap: 1vw;
-        overflow-x: auto;
+        @apply max-w-full px-[1vw] gap-[1vw] overflow-x-auto;
         -webkit-overflow-scrolling: touch;
     }
 
     .button {
-        font-size: 0.9rem;
-        padding: 0.5em 0.8em;
+        @apply text-[0.9rem] px-[0.8em] py-[0.5em];
+    }
+}
+
+@layer utilities {
+    .gap-\[1\.2vw\] {
+        gap: 1.2vw;
     }
 }

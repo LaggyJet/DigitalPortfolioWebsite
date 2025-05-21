@@ -1,143 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #__next_dev_indicator {
-    display: none !important;
-}
-
-.iconRow {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.iconWrapper {
-    background-color: #B094FF;
-    border-radius: 50%;
-    padding: 0.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    transition: background-color 0.25s ease;
-}
-
-.iconWrapper:hover {
-    background-color: #D5C7FF;
-}
-
-.icon {
-    width: 24px;
-    height: 24px;
-    fill: #5F4F8C;
-    transition: fill 0.25s ease;
-    pointer-events: none;
+    @apply hidden !important;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    @apply m-0 p-0 box-border;
 }
 
 body {
-    background-color: #151517;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    background-color: #f0f0f0;
-    color: #151517;
-    overflow-x: hidden;
+    @apply overflow-x-hidden bg-[#f0f0f0] text-[#151517] font-sans;
 }
 
 .background {
-    min-height: 100vh;
-    background-color: #151517;
-    background: #151517 url('/MainBackground.png') no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: fadeIn 1.0s ease-out both;
+    @apply min-h-screen bg-[#151517] bg-[url('/MainBackground.png')] bg-no-repeat bg-center bg-fixed bg-cover flex justify-center items-center;
+    animation: fadeIn 1s ease-out both;
 }
 
 .container {
-    height: calc(100vh - 6.5vh);
-    padding: 2vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    box-sizing: border-box;
-    max-width: min(90vw, 900px);
-    margin: 0 auto;
-    animation: fadeIn 1.0s ease-out both;
+    @apply h-[calc(100vh-6.5vh)] p-[2vw] flex flex-col items-center justify-center text-center box-border w-full max-w-[900px] mx-auto;
+    animation: fadeIn 1s ease-out both;
     animation-delay: 0.4s;
 }
 
 .title {
-    color: #ffffff;
-    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-    margin-bottom: 1.25vw;
-    line-height: 1.2;
-    animation: fadeIn 1.0s ease-out both;
+    @apply text-white mb-[1.25vw] leading-[1.2] text-title-clamp;
+    animation: fadeIn 1s ease-out both;
     animation-delay: 0.5s;
 }
 
 .description {
-    color: #ffffff;
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
-    max-width: min(60vw, 600px);
-    margin-bottom: 2vw;
-    line-height: 1.4;
-    animation: fadeIn 1.0s ease-out both;
+    @apply text-white max-w-[600px] mb-[2vw] leading-[1.4] text-description-clamp;
+    animation: fadeIn 1s ease-out both;
     animation-delay: 0.6s;
 }
 
 .list {
-    color: #ffffff;
-    font-size: clamp(1rem, 1.4vw, 1.4rem);
-    max-width: min(60vw, 600px);
-    margin: 0 auto 2vw auto;
-    padding-left: 0;
-    list-style-position: inside;
-    list-style-type: disc;
-    text-align: center;
-    line-height: 1.4;
+    @apply text-white max-w-[600px] mx-auto mb-[2vw] pl-5 list-inside list-disc text-list-clamp text-center leading-[1.4];
 }
 
 .list li {
     margin-bottom: 1.2vw;
 }
 
+.section {
+    @apply py-[3vw];
+}
+
+.iconRow {
+    @apply flex gap-6 justify-center mt-4;
+}
+
+.iconWrapper {
+    @apply bg-[#B094FF] rounded-full p-3 flex items-center justify-center w-12 h-12 transition-colors duration-250 ease-in-out;
+}
+
+.iconWrapper:hover {
+    @apply bg-[#D5C7FF];
+}
+
+.icon {
+    @apply w-6 h-6 pointer-events-none transition-colors duration-300 ease-in-out fill-[#5F4F8C];
+}
+
 .buttonRow {
-    display: flex;
-    gap: 1.8vw;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 2vw;
+    @apply flex gap-[1.8vw] flex-wrap justify-center mb-[2vw];
 }
 
 .buttonRow>.button {
     opacity: 0;
     animation-name: fadeInLeftToRight;
-    animation-duration: 1.0s;
+    animation-duration: 1s;
     animation-fill-mode: both;
     animation-timing-function: ease-out;
 }
 
 .button {
-    display: flex;
-    align-items: center;
-    gap: 0.6vw;
-    padding: 0.9vw 1.8vw;
-    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
-    border: 0.15vw solid #b094ff;
-    background: transparent;
-    color: #b094ff;
-    border-radius: 1vw;
-    cursor: pointer;
-    transition: background-color 0.25s ease, color 0.25s ease;
-    white-space: nowrap;
-    text-decoration: none;
+    @apply flex items-center gap-[0.6vw] px-[1.8vw] py-[0.9vw] border-[0.15vw] border-[#b094ff] bg-transparent text-[#b094ff] rounded-[1vw] cursor-pointer transition-colors duration-300 ease-in-out whitespace-nowrap no-underline;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem); 
 }
 
 .button.back {
@@ -146,9 +88,7 @@ body {
 
 .button:hover,
 .button:focus {
-    background-color: #d5c7ff;
-    color: black;
-    outline: none;
+    @apply bg-[#d5c7ff] text-black outline-none;
 }
 
 .button:focus-visible {
@@ -157,17 +97,12 @@ body {
 }
 
 .link {
-    color: #b094ff;
-    text-decoration: underline;
-    transition: color 0.25s ease;
-    cursor: pointer;
+    @apply text-[#b094ff] underline transition-colors duration-250 ease-in-out cursor-pointer;
 }
 
 .link:hover,
 .link:focus {
-    color: #d5c7ff;
-    text-decoration: underline;
-    outline: none;
+    @apply text-[#d5c7ff] underline outline-none;
 }
 
 .link:focus-visible {
@@ -185,57 +120,22 @@ body {
     transition: width 0.3s ease, height 0.3s ease;
 }
 
-@media (max-width: 600px) {
-    .iconRow {
-        gap: 1rem;
-        margin-top: 1rem;
-    }
+:root {
+    --title-clamp: clamp(1.8rem, 4vw, 3rem);
+    --description-clamp: clamp(1rem, 2vw, 1.2rem);
+    --list-clamp: clamp(0.95rem, 1.2vw, 1rem);
+}
 
-    .iconWrapper {
-        width: 36px;
-        height: 36px;
-        padding: 0.5rem;
-    }
+.text-title-clamp {
+    font-size: var(--title-clamp);
+}
 
-    .icon {
-        width: 20px;
-        height: 20px;
-        margin-left: 8px;
-    }
+.text-description-clamp {
+    font-size: var(--description-clamp);
+}
 
-    .button {
-        font-size: 1rem;
-        padding: 0.8rem 1.4rem;
-        gap: 8px;
-        border-width: 2px;
-        border-radius: 12px;
-        white-space: normal;
-        justify-content: center;
-    }
-
-    .buttonRow {
-        gap: 1rem;
-    }
-
-    .list li {
-        margin-bottom: 1rem;
-    }
-
-    .container {
-        height: auto;
-        padding: 1.5rem;
-    }
-
-    .title {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    .description,
-    .list {
-        max-width: 100%;
-        font-size: 1.1rem;
-    }
+.text-list-clamp {
+    font-size: var(--list-clamp);
 }
 
 @keyframes fadeIn {
@@ -259,5 +159,52 @@ body {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .iconRow {
+        @apply gap-4 mt-4;
+    }
+
+    .iconWrapper {
+        @apply w-9 h-9 p-2;
+    }
+
+    .icon {
+        @apply w-5 h-5 ml-2;
+    }
+
+    .button {
+        font-size: 1rem !important;
+        padding: 0.8rem 1.4rem !important;
+        gap: 8px !important;
+        border-width: 2px !important;
+        border-radius: 12px !important;
+        white-space: normal !important;
+        justify-content: center !important;
+    }
+
+    .buttonRow {
+        @apply gap-4;
+    }
+
+    .list li {
+        margin-bottom: 1rem;
+    }
+
+    .container {
+        @apply h-auto p-6;
+    }
+
+    .title {
+        font-size: 2rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .description,
+    .list {
+        @apply max-w-full;
+        font-size: 1.1rem !important;
     }
 }

@@ -1,25 +1,57 @@
+@tailwind utilities;
+
+@layer utilities {
+    .w-\[min\(12vw\,48px\)\] {
+        width: min(12vw, 48px);
+    }
+
+    .h-\[min\(12vw\,48px\)\] {
+        height: min(12vw, 48px);
+    }
+
+    .p-\[min\(2vw\,0\.75rem\)\] {
+        padding: min(2vw, 0.75rem);
+    }
+
+    .gap-\[min\(4vw\,1\.5rem\)\] {
+        gap: min(4vw, 1.5rem);
+    }
+
+    .gap-\[min\(2vw\,0\.5rem\)\] {
+        gap: min(2vw, 0.5rem);
+    }
+
+    .w-\[min\(6vw\,24px\)\] {
+        width: min(6vw, 24px);
+    }
+
+    .h-\[min\(6vw\,24px\)\] {
+        height: min(6vw, 24px);
+    }
+}
+
 .iconRow {
-    display: flex;
+    @apply flex justify-center;
     gap: min(4vw, 1.5rem);
-    justify-content: center;
     margin-top: min(3vh, 1rem);
 }
 
 .iconWrapper {
     background-color: #B094FF;
-    border-radius: 50%;
+    border-radius: 9999px;
     padding: min(2vw, 0.75rem);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @apply flex items-center justify-center;
     width: min(12vw, 48px);
     height: min(12vw, 48px);
     transition: background-color 0.25s ease;
     box-sizing: border-box;
+    transition-property: transform, background-color;
+    transition-duration: 0.2s;
 }
 
 .iconWrapper:hover {
     background-color: #D5C7FF;
+    transform: scale(1.1);
 }
 
 .giticon {
@@ -28,7 +60,7 @@
     fill: #5F4F8C;
     transition: fill 0.25s ease;
     pointer-events: none;
-    scale: 210%;
+    transform: scale(2.1);
 }
 
 .linkicon {
@@ -37,7 +69,7 @@
     fill: #5F4F8C;
     transition: fill 0.25s ease;
     pointer-events: none;
-    transform: scale(150%) translateX(-3%);
+    transform: scale(1.5) translateX(-3%);
 }
 
 @media (max-width: 600px) {
@@ -59,10 +91,10 @@
     }
 
     .giticon {
-        scale: 210%;
+        transform: scale(2.1);
     }
 
     .linkicon {
-        transform: scale(150%) translateX(-3%);
+        transform: scale(1.5) translateX(-3%);
     }
 }
