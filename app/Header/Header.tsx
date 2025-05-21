@@ -1,31 +1,39 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import styles from './Header.module.css';
-import { LeftArrow } from '../Shared/icons';
+import Hamburger from './Hamburger';
 
 export default function Header() {
     const router = useRouter();
+    const pathname = usePathname();
+    const navLinks = [
+        { label: 'Home', path: '/' },
+        { label: 'Skills & Experience', path: '/Skills-Experience' },
+        { label: 'Projects', path: '/Projects' },
+        { label: 'Contact', path: '/Contact' },
+    ];
     return (
         <header className={styles.header}>
-            <button className="button back" onClick={() => router.back()}>
-                <LeftArrow />
-                Back
-            </button>
-            <div className={styles.navContent}>
-                <button className="button" onClick={() => router.push('/')}>
-                Home
-                </button>
-                <button className="button" onClick={() => router.push('/Skills-Experience')}>
-                Skills/Experience
-                </button>
-                <button className="button" onClick={() => router.push('/Projects')}>
-                Projects
-                </button>
-                <button className="button" onClick={() => router.push('/Contact')}>
-                Contact
-                </button>
-            </div>
+            <Hamburger />
+            <nav className={styles.navContent}>
+                {navLinks.map(({ label, path }) => {
+                    const isActive =
+                        path === '/Projects'
+                            ? pathname.toLowerCase().startsWith('/projects')
+                            : pathname === path;
+
+                    return (
+                        <button
+                            key={path}
+                            className={`button ${isActive ? 'active' : ''}`}
+                            onClick={() => router.push(path)}
+                        >
+                            {label}
+                        </button>
+                    );
+                })}
+            </nav>
         </header>
     );
 }

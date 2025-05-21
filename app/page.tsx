@@ -6,7 +6,7 @@ import { RightArrow, DocumentIcon } from './Shared/icons';
 export default function HomePage() {
     const router = useRouter();
     const buttons = [
-        { label: 'Skills/Experience', href: '/Skills-Experience', icon: <RightArrow /> },
+        { label: 'Skills & Experience', href: '/Skills-Experience', icon: <RightArrow /> },
         { label: 'Projects', href: '/Projects', icon: <RightArrow /> },
         { label: 'Contact', href: '/Contact', icon: <RightArrow /> },
         {
@@ -22,6 +22,9 @@ export default function HomePage() {
             <p className="description">
                 I am a Simulation and Visualization Engineering student at Full Sail University.
             </p>
+            <p className="description">Background Filler</p>
+            <p className="description">Career Filler</p>
+            <p className="description">What I do Filler</p>
             <div className="buttonRow">
                 {buttons.map(({ label, href, icon, download }) =>
                     download ? (
@@ -31,7 +34,7 @@ export default function HomePage() {
                             download
                             className="button"
                         >
-                            <span className="label">{label}</span>
+                            {label}
                             {icon}
                         </a>
                     ) : (
@@ -40,7 +43,7 @@ export default function HomePage() {
                             className="button"
                             onClick={() => router.push(href)}
                         >
-                            <span className="label">{label}</span>
+                            {label}
                             {icon}
                         </button>
                     )

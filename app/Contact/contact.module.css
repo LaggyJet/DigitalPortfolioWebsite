@@ -1,30 +1,68 @@
 .iconRow {
     display: flex;
-    gap: 1.5rem;
+    gap: min(4vw, 1.5rem);
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: min(3vh, 1rem);
 }
 
 .iconWrapper {
     background-color: #B094FF;
     border-radius: 50%;
-    padding: 0.75rem;
+    padding: min(2vw, 0.75rem);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
+    width: min(12vw, 48px);
+    height: min(12vw, 48px);
     transition: background-color 0.25s ease;
+    box-sizing: border-box;
 }
 
 .iconWrapper:hover {
     background-color: #D5C7FF;
 }
 
-.icon {
-    width: 24px;
-    height: 24px;
+.giticon {
+    width: min(6vw, 24px);
+    height: min(6vw, 24px);
     fill: #5F4F8C;
     transition: fill 0.25s ease;
     pointer-events: none;
+    scale: 210%;
+}
+
+.linkicon {
+    width: min(6vw, 24px);
+    height: min(6vw, 24px);
+    fill: #5F4F8C;
+    transition: fill 0.25s ease;
+    pointer-events: none;
+    transform: scale(150%) translateX(-3%);
+}
+
+@media (max-width: 600px) {
+    .iconRow {
+        gap: 5vw;
+        margin-top: 4vh;
+    }
+
+    .iconWrapper {
+        width: 14vw;
+        height: 14vw;
+        padding: 3vw;
+    }
+
+    .giticon,
+    .linkicon {
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .giticon {
+        scale: 210%;
+    }
+
+    .linkicon {
+        transform: scale(150%) translateX(-3%);
+    }
 }

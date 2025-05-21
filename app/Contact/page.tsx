@@ -1,11 +1,9 @@
 'use client';
 
 import styles from './contact.module.css';
-import { useRouter } from 'next/navigation';
-import { LeftArrow, GitHubIcon, LinkedInIcon } from '../Shared/icons';
+import { GitHubIcon, LinkedInIcon } from '../Shared/icons';
 
 export default function ContactPage() {
-    const router = useRouter();
     return (
         <div className="container">
             <h1 className="title">Contact</h1>
@@ -23,7 +21,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className={styles.iconWrapper}
                 >
-                    <GitHubIcon className={styles.icon} />
+                    <GitHubIcon className={styles.giticon} />
                 </a>
                 <a
                     href="https://www.linkedin.com/in/joshua-furber/"
@@ -31,7 +29,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className={styles.iconWrapper}
                 >
-                    <LinkedInIcon className={styles.icon} />
+                    <LinkedInIcon className={styles.linkicon} />
                 </a>
             </div>
         </div>
