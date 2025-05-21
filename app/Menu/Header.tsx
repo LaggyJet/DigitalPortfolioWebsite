@@ -2,7 +2,7 @@
 
 import { useRouter, usePathname } from 'next/navigation';
 import styles from './Header.module.css';
-import Hamburger from './HamburgerMenu';
+import HamburgerMenu from './HamburgerMenu';
 
 export default function Header() {
     const router = useRouter();
@@ -15,7 +15,7 @@ export default function Header() {
     ];
     return (
         <header className={styles.header}>
-            <Hamburger className={styles.hamburgerOnly} />
+            <HamburgerMenu className={styles.hamburgerOnly} />
             <nav className={styles.navContent}>
                 {navLinks.map(({ label, path }) => {
                     const isActive =

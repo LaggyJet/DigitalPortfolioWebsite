@@ -5,7 +5,11 @@ import { useRouter, usePathname } from 'next/navigation';
 import { HamburgerIcon, DownArrow, UpArrow } from '../Shared/icons';
 import styles from './HamburgerMenu.module.css';
 
-export default function HamburgerMenu() {
+interface HamburgerMenuProps {
+    className?: string;
+}
+
+export default function HamburgerMenu({ className }: HamburgerMenuProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [showProjects, setShowProjects] = useState(false);
     const [projectSubLinks, setProjectSubLinks] = useState<{ label: string; path: string }[]>([]);
