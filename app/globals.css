@@ -40,8 +40,7 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     background-color: #f0f0f0;
     color: #222;
     overflow-x: hidden;
@@ -54,6 +53,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 4.5s ease-out both;
 }
 
 .container {
@@ -67,6 +67,8 @@ body {
     box-sizing: border-box;
     max-width: min(90vw, 900px);
     margin: 0 auto;
+    animation: fadeIn 4.5s ease-out both;
+    animation-delay: 0.4s;
 }
 
 .title {
@@ -74,6 +76,8 @@ body {
     font-size: clamp(1.5rem, 2.5vw, 2.5rem);
     margin-bottom: 1.25vw;
     line-height: 1.2;
+    animation: fadeIn 4.5s ease-out both;
+    animation-delay: 0.5s;
 }
 
 .description {
@@ -82,6 +86,8 @@ body {
     max-width: min(60vw, 600px);
     margin-bottom: 2vw;
     line-height: 1.4;
+    animation: fadeIn 4.5s ease-out both;
+    animation-delay: 0.6s;
 }
 
 .list {
@@ -106,6 +112,14 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 2vw;
+}
+
+.buttonRow>.button {
+    opacity: 0;
+    animation-name: fadeInLeftToRight;
+    animation-duration: 1.2s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
 }
 
 .button {
@@ -219,5 +233,29 @@ body {
     .list {
         max-width: 100%;
         font-size: 1.1rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeftToRight {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
