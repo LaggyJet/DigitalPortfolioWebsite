@@ -1,5 +1,6 @@
 'use client';
 
+import type { JSX } from 'react';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { RightArrow } from '../Shared/icons';
