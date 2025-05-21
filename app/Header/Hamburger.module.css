@@ -143,6 +143,11 @@
     color: #D5C7FF;
 }
 
+.wrapper {
+    position: relative;
+    display: inline-block;
+}
+
 @media (max-width: 600px) {
     .menu {
         width: 70vw;

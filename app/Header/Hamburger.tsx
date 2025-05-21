@@ -46,14 +46,11 @@ export default function Hamburger() {
     const toggleMenu = () => setIsOpen(v => !v);
     const toggleProjects = () => setShowProjects(v => !v);
     return (
-        <>
+        <div ref={menuRef} className={styles.wrapper}>
             <button onClick={toggleMenu} className={styles.iconButton}>
                 <HamburgerIcon className={styles.icon} />
             </button>
-            <div
-                ref={menuRef}
-                className={`${styles.menu} ${isOpen ? styles.open : ''}`}
-            >
+            <div className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
                 <div className={styles.linksContainer}>
                     {navLinks.map(({ label, path }) => {
                         const isProjects = label === 'Projects';
@@ -110,6 +107,6 @@ export default function Hamburger() {
                     </a>
                 </div>
             </div>
-        </>
+        </div>
     );
 }

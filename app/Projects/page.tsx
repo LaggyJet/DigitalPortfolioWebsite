@@ -9,8 +9,8 @@ import { DTDragonsLogo, FSFlightSimLogo, SensoryPanelLogo, TheGrittyLogo } from 
 const logoMap: Record<string, JSX.Element> = {
     'The-Gritty': <TheGrittyLogo />,
     'FS-FlightSim': <FSFlightSimLogo />,
-    DTDragons: <DTDragonsLogo />,
-    SensoryPanels: <SensoryPanelLogo />,
+    'DT-Dragons': <DTDragonsLogo />,
+    'Sensory-Panels': <SensoryPanelLogo />,
 };
 
 export default function ProjectsPage() {
