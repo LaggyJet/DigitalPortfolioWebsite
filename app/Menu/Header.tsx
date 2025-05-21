@@ -2,7 +2,7 @@
 
 import { useRouter, usePathname } from 'next/navigation';
 import styles from './Header.module.css';
-import Hamburger from './Hamburger';
+import Hamburger from './HamburgerMenu';
 
 export default function Header() {
     const router = useRouter();
@@ -15,11 +15,13 @@ export default function Header() {
     ];
     return (
         <header className={styles.header}>
-            <Hamburger />
+            <Hamburger className={styles.hamburgerOnly} />
             <nav className={styles.navContent}>
                 {navLinks.map(({ label, path }) => {
                     const isActive =
-                        path === '/Projects' ? pathname.toLowerCase().startsWith('/projects') : pathname === path;
+                        path === '/Projects'
+                            ? pathname.toLowerCase().startsWith('/projects')
+                            : pathname === path;
                     return (
                         <button
                             key={path}

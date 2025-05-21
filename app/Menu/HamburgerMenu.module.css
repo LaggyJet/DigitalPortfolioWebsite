@@ -1,7 +1,7 @@
 @tailwind utilities;
 
 .hamburger {
-    @apply fixed top-[6.5vh] left-[-25vw] z-20 flex flex-col justify-around items-center cursor-pointer gap-[2vh] px-[0.25vw] py-[0.2vw];
+    @apply fixed top-[5.5vh] left-[-16vw] z-20 flex flex-col justify-around items-center cursor-pointer gap-[2vh] px-[0.25vw] py-[0.2vw];
     width: min(2.5vw, 32px);
     height: min(2.5vw, 32px);
     transition: all 0.5s ease-in-out;
@@ -23,7 +23,7 @@
 }
 
 .menu {
-    @apply fixed top-[6.5vh] left-[-25vw] w-[22vw] h-[93.5vh] bg-black/80 flex flex-col px-[2vw] py-[4vh] gap-[2vh] transition-all duration-300 z-[1000];
+    @apply fixed top-[5.5vh] left-[-16vw] w-[16vw] h-[94.5vh] bg-black/80 flex flex-col px-[2vw] py-[4vh] gap-[2vh] transition-all duration-300 z-[1000];
 }
 
 .linksContainer {
@@ -89,7 +89,7 @@
 
 @media (max-width: 600px) {
     .hamburger {
-        left: -70vw;
+        left: -60vw;
         width: min(7vw, 32px);
         height: min(7vw, 32px);
         gap: 4vh;
@@ -100,7 +100,7 @@
     }
 
     .menu {
-        @apply w-[70vw] left-[-70vw];
+        @apply w-[60vw] left-[-60vw] top-[6vh] h-[94vh];
     }
 
     .open {
@@ -149,24 +149,36 @@
         padding-top: 1vh;
     }
 
-    .top-\[6\.5vh\] {
-        top: 6.5vh;
+    .top-\[5\.5vh\] {
+        top: 5.5vh;
     }
 
-    .left-\[-25vw\] {
-        left: -25vw;
+    .top-\[6vh\] {
+        top: 6vh;
     }
 
-    .left-\[-70vw\] {
-        left: -70vw;
+    .left-\[-16vw\] {
+        left: -16vw;
     }
 
-    .w-\[22vw\] {
-        width: 22vw;
+    .left-\[-60vw\] {
+        left: -60vw;
     }
 
-    .h-\[93\.5vh\] {
-        height: 93.5vh;
+    .w-\[16vw\] {
+        width: 16vw;
+    }
+
+    .w-\[60vw\] {
+        width: 60vw;
+    }
+
+    .h-\[94\.5vh\] {
+        height: 94.5vh;
+    }
+
+    .h-\[94vh\] {
+        height: 94vh;
     }
 
     .px-\[2vw\] {

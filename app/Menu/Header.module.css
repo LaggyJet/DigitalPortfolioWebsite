@@ -22,12 +22,21 @@
     }
 
     .navContent {
-        @apply max-w-full px-[1vw] gap-[1vw] overflow-x-auto;
-        -webkit-overflow-scrolling: touch;
+        display: none;
+    }
+
+    .hamburgerOnly {
+        display: block;
     }
 
     .button {
         @apply text-[0.9rem] px-[0.8em] py-[0.5em];
+    }
+}
+
+@media (min-width: 601px) {
+    .hamburgerOnly {
+        display: none;
     }
 }
 

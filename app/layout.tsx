@@ -1,10 +1,10 @@
 'use client';
 
 import './globals.css';
-import Header from './Header/Header';
 import { ButtonAnimationDelay, formatTitleFromPath } from './Components/HelperFunctions';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import Header from './Menu/Header'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
@@ -15,6 +15,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     useEffect(() => {
         document.title = title;
     }, [title]);
+    useEffect(() => {
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+        document.body.style.height = '100vh';
+        document.documentElement.style.height = '100vh';
+    }, []);
     return (
         <html lang="en" style={{ backgroundColor: "#151517" }}>
         <head>
