@@ -57,11 +57,8 @@ body {
     text-decoration: none;
 }
 
-.buttonRow {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
+.button.back {
+    margin-left: 20px;
 }
 
 .button:hover {
@@ -69,25 +66,11 @@ body {
     color: black;
 }
 
-.backButton {
-    align-self: flex-start;
-    margin-bottom: 2rem;
+.buttonRow {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border: 2px solid #B094FF;
-    background: transparent;
-    color: #B094FF;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: background-color 0.25s ease;
-}
-
-.backButton:hover {
-    background-color: #D5C7FF;
-    color: black;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .title {

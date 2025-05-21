@@ -8,10 +8,6 @@ export default function ContactPage() {
     const router = useRouter();
     return (
         <div className="container">
-            <button className="backButton" onClick={() => router.back()}>
-                <LeftArrow />
-                Back
-            </button>
             <h1 className="title">Contact</h1>
             <p className="description">
                 Feel free to reach out at my{' '}

@@ -7,10 +7,6 @@ export default function FSFlightSimPage() {
     const router = useRouter();
     return (
         <div className="container">
-            <button className="backButton" onClick={() => router.back()}>
-                <LeftArrow />
-                Back
-            </button>
             <h1 className="title"><u>FS - Flight Sim</u></h1>
             <p className="description">Filler for video</p>
             <ul className="list">

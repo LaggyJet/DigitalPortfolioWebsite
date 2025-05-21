@@ -7,10 +7,6 @@ export default function SkillsExperiencePage() {
     const router = useRouter();
     return (
         <div className="container">
-            <button className="backButton" onClick={() => router.back()}>
-                <LeftArrow />
-                Back
-            </button>
             <h1 className="title">Skills</h1>
             <ul className="list">
                 <li>Tools & IDEs: Visual Studio, Visual Studio Code, Qt Creator, Git, Jira, Bitbucket</li>

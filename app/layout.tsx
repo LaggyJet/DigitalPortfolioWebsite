@@ -1,20 +1,23 @@
+// app/layout.tsx
 import './globals.css';
 import { ReactNode } from 'react';
+import Header from './Header/Header';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
     return (
         <html lang="en">
-            <body>
-                <div
-                    className="background"
-                    style={{
-                    backgroundImage: 'url(./MainBackground.png)',
-                    }}
-                >
-                    {children}
-                </div>
-            </body>
+        <body>
+            <Header /> {}
+            <div
+            className="background"
+            style={{
+                backgroundImage: 'url(/MainBackground.png)',
+                paddingTop: '60px', 
+            }}
+            >
+            {children}
+            </div>
+        </body>
         </html>
     );
 }

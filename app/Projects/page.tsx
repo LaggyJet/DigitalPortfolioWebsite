@@ -14,10 +14,6 @@ export default function ProjectsPage() {
     ];
     return (
         <div className="container">
-            <button className="backButton" onClick={() => router.back()}>
-                <LeftArrow />
-                Back
-            </button>
             <h1 className="title">Projects</h1>
             <div className="buttonRow">
                 {buttons.map(({ label, href, logo, icon }) =>
