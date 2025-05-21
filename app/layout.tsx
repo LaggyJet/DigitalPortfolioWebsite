@@ -1,5 +1,4 @@
 import './globals.css';
-import { ReactNode } from 'react';
 import Header from './Header/Header';
 import ButtonAnimationDelay from './Components/ButtonAnimationDelay';
 

@@ -19,14 +19,11 @@ export default function Header() {
             <nav className={styles.navContent}>
                 {navLinks.map(({ label, path }) => {
                     const isActive =
-                        path === '/Projects'
-                            ? pathname.toLowerCase().startsWith('/projects')
-                            : pathname === path;
-
+                        path === '/Projects' ? pathname.toLowerCase().startsWith('/projects') : pathname === path;
                     return (
                         <button
                             key={path}
-                            className={`button ${isActive ? 'active' : ''}`}
+                            className={`button ${isActive ? styles.active : ''}`}
                             onClick={() => router.push(path)}
                         >
                             {label}
