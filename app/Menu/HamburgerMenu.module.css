@@ -92,22 +92,25 @@
     .hamburger {
         left: -60vw;
         width: min(7vw, 32px);
-        height: min(7vw, 32px);
+        height: 97%;
         gap: 4vh;
         padding-left: 20px;
         padding-right: 1vw;
-        padding-top: 0.5vw;
         padding-bottom: 0.5vw;
-        margin-bottom: -2.5vh;
+        padding-top: 5.5%;
+        margin-bottom: 1%;
     }
 
     .menu {
         @apply w-[60vw] left-[-60vw] top-[6vh];
         bottom: 0;
-        height: auto;
+        height: 97%;
+        width: 60%;
         overflow-y: auto;
         padding-left: 20px;
         margin-bottom: -2.5vh;
+        padding-top: 5.5%;
+        margin-bottom: 1%;
     }
 
     .open {
@@ -137,9 +140,9 @@
     }
 
     .resumeSection {
-            margin-bottom: 0.5vh;
-            padding-top: 2vh;
-            margin-bottom: -1rem;
+            padding-top: 5.5%;
+            margin-bottom: -0.0rem;
+            margin-right: 8%;
         }
 }
 
