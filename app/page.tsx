@@ -20,11 +20,17 @@ export default function HomePage() {
         <div className="container">
             <h1 className="title">Joshua Furber</h1>
             <p className="description">
-                I am a Simulation and Visualization Engineering student at Full Sail University.
+                Simulation and Visualization Engineering
             </p>
-            <p className="description">Background Filler</p>
-            <p className="description">Career Filler</p>
-            <p className="description">What I do Filler</p>
+            <p className="description">
+                Raised in Florida, I've been fascinated by technology since high school, when I first started programming.
+            </p>
+            <p className="description">
+                I'm building a career in simulation and robotics, aiming to create practical, innovative solutions.
+            </p>
+            <p className="description">
+                Feel free to explore my work.
+            </p>
             <div className="buttonRow">
                 {buttons.map(({ label, href, icon, download }) =>
                     download ? (

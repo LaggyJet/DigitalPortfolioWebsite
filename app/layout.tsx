@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <head>
                 <title>{title}</title>
             </head>
-            <body style={{ backgroundColor: "#151517" }}>
+            <body style={{ backgroundColor: "#151517", overflowY:"scroll" }}>
                 <Header />
                 <div className="background">{children}</div>
                 <ButtonAnimationDelay />
