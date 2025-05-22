@@ -112,8 +112,8 @@ export default function HamburgerMenu({ className }: HamburgerMenuProps) {
                         })}
                     </div>
                     <div className={styles.resumeSection}>
-                        <a href="/JF-Resume.pdf" download className={styles.resumeButton}>
-                            Download Resume
+                        <a href="/Resume" className={styles.resumeButton}>
+                            View Resume
                         </a>
                     </div>
                 </div>

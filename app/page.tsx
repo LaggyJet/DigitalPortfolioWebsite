@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { RightArrow, DocumentIcon } from './Shared/icons';
+import { RightArrow } from './Shared/icons';
 
 export default function HomePage() {
     const router = useRouter();
@@ -9,12 +9,7 @@ export default function HomePage() {
         { label: 'Skills & Experience', href: '/Skills-Experience', icon: <RightArrow /> },
         { label: 'Projects', href: '/Projects', icon: <RightArrow /> },
         { label: 'Contact', href: '/Contact', icon: <RightArrow /> },
-        {
-            label: 'Download Resume',
-            href: '/JF-Resume.pdf',
-            icon: <DocumentIcon />,
-            download: true,
-        },
+        { label: 'View Resume', href: '/Resume', icon: <RightArrow /> },
     ];
     return (
         <div className="container">
@@ -32,18 +27,8 @@ export default function HomePage() {
                 Feel free to explore my work.
             </p>
             <div className="buttonRow">
-                {buttons.map(({ label, href, icon, download }) =>
-                    download ? (
-                        <a
-                            key={label}
-                            href={href}
-                            download
-                            className="button"
-                        >
-                            {label}
-                            {icon}
-                        </a>
-                    ) : (
+                {buttons.map(({ label, href, icon}) =>
+                    (
                         <button
                             key={label}
                             className="button"
