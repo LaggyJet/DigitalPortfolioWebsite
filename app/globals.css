@@ -11,11 +11,11 @@
 }
 
 body {
-    @apply overflow-x-hidden bg-[#f0f0f0] text-[#151517] font-sans;
+    @apply overflow-x-hidden overflow-y-auto bg-[#f0f0f0] text-[#151517] font-sans;
 }
 
 .background {
-    @apply min-h-screen bg-[#151517] bg-[url('/MainBackground.png')] bg-no-repeat bg-center bg-fixed bg-cover flex justify-center items-center;
+    @apply min-h-screen bg-[#151517] bg-[url('/MainBackground.png')] bg-no-repeat bg-center bg-fixed bg-cover flex justify-center items-center pt-[6.5vh];
     animation: fadeIn 1s ease-out both;
 }
 
@@ -79,7 +79,7 @@ body {
 
 .button {
     @apply flex items-center gap-[0.6vw] px-[1.8vw] py-[0.9vw] border-[0.15vw] border-[#b094ff] bg-transparent text-[#b094ff] rounded-[1vw] cursor-pointer transition-colors duration-300 ease-in-out whitespace-nowrap no-underline;
-    font-size: clamp(0.9rem, 1.1vw, 1.1rem); 
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
 }
 
 .button.back {
@@ -138,6 +138,27 @@ body {
     font-size: var(--list-clamp);
 }
 
+.responsive-iframe-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #000;
+}
+
+.responsive-iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -194,7 +215,11 @@ body {
     }
 
     .container {
-        @apply h-auto p-6;
+        @apply min-h-[calc(100svh-6.5vh)] pt-[6.5vh] pb-[2vh] px-6;
+    }
+
+    .background {
+        @apply pt-[6.5vh] pb-[2vh];
     }
 
     .title {

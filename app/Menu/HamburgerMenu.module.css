@@ -122,6 +122,10 @@
     .sublink {
         @apply text-[0.95rem];
     }
+
+    .resumeSection {
+        @apply mb-[2vh];
+    }
 }
 
 @layer utilities {
@@ -189,5 +193,9 @@
     .py-\[4vh\] {
         padding-top: 4vh;
         padding-bottom: 4vh;
+    }
+
+    .mb-\[2vh\] {
+        margin-bottom: 2vh;
     }
 }

@@ -4,15 +4,13 @@ export default function TheGrittyPage() {
     return (
         <div className="container">
         <h1 className="title" style={{ textDecoration: 'underline' }}>The Gritty</h1>
-        <iframe
-            src="https://drive.google.com/file/d/1XCC311gdZKthu9LPcfaamjuV17aUrONC/preview"
-            width="640"
-            height="360"
-            className="description"
-            allow="encrypted-media"
-            allowFullScreen
-            style={{ border: 'none' }}
-        />
+        <div className="responsive-iframe-wrapper">
+            <iframe
+                src="https://drive.google.com/file/d/1XCC311gdZKthu9LPcfaamjuV17aUrONC/preview"
+                allow="encrypted-media"
+                allowFullScreen
+            />
+        </div>
         <ul className="list">
             <li>Includes multiple playable classes and supports multiplayer with friends.</li>
             <li>Features an Arduino-based debugger in single-player mode that displays health and allows real-time updates to health and stamina.</li>
