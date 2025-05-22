@@ -127,10 +127,10 @@
         @apply text-[0.95rem];
     }
 
-    .resumeSection {
-        margin-bottom: 3vh;
-        padding-top: 0;
-    }
+        .resumeSection {
+            margin-bottom: 1.5vh;
+            padding-top: 1vh;
+        }
 }
 
 @layer utilities {
