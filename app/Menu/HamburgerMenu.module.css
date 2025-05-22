@@ -23,7 +23,7 @@
 }
 
 .menu {
-    @apply fixed top-[5.5vh] left-[-16vw] w-[16vw] h-[94.5vh] bg-black/80 flex flex-col px-[2vw] py-[4vh] gap-[2vh] transition-all duration-300 z-[1000];
+    @apply fixed top-[5.5vh] left-[-16vw] w-[16vw] h-[94.5vh] bg-black/80 flex flex-col px-[2vw] py-[4vh] gap-[2vh] transition-all duration-300 z-[-1];
 }
 
 .linksContainer {
@@ -94,10 +94,11 @@
         width: min(7vw, 32px);
         height: min(7vw, 32px);
         gap: 4vh;
-        padding-left: 1vw;
+        padding-left: 20px;
         padding-right: 1vw;
         padding-top: 0.5vw;
         padding-bottom: 0.5vw;
+        margin-bottom: -2.5vh;
     }
 
     .menu {
@@ -105,6 +106,8 @@
         bottom: 0;
         height: auto;
         overflow-y: auto;
+        padding-left: 20px;
+        margin-bottom: -2.5vh;
     }
 
     .open {
@@ -121,15 +124,22 @@
 
     .link {
         @apply text-[1rem];
+        padding-left: 20px;
     }
 
     .sublink {
         @apply text-[0.95rem];
+        padding-left: 20px;
+    }
+
+    .submenuOpen::before {
+        margin-left: 30px;
     }
 
     .resumeSection {
             margin-bottom: 0.5vh;
             padding-top: 2vh;
+            margin-bottom: -1rem;
         }
 }
 

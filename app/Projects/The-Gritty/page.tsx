@@ -11,24 +11,25 @@ export default function TheGrittyPage() {
                 allowFullScreen
             />
         </div>
-        <ul className="list">
-            <li>Includes multiple playable classes and supports multiplayer with friends.</li>
-            <li>Features an Arduino-based debugger in single-player mode that displays health and allows real-time updates to health and stamina.</li>
-            <li>Arduino connection includes a heartbeat check to ensure reliable communication and detect disconnections.</li>
-            <li>
-            <a
-                href="https://drive.google.com/uc?export=download&id=19bGvq5_zmxKtidAp9CT8GewPzC5zlVkd"
-                className="link"
-            >
-                Download The Game
-            </a>
-            </li>
-            <li>
-            <a href="https://github.com/LaggyJet/TheGritty" className="link">
-                Check The Repo
-            </a>
-            </li>
-        </ul>
+            <ul className="list">
+                <li>A 3D First Person Shooter made With Unity.</li>
+                <li>Includes multiple playable classes and supports multiplayer with friends.</li>
+                <li>Features an Arduino-based debugger in single-player mode that displays health and allows real-time updates to health and stamina.</li>
+                <li>Arduino connection includes a heartbeat check to ensure reliable communication and detect disconnections.</li>
+                <li>
+                    <a
+                        href="https://drive.google.com/uc?export=download&id=19bGvq5_zmxKtidAp9CT8GewPzC5zlVkd"
+                        className="link"
+                    >
+                        Download The Game
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/LaggyJet/TheGritty" className="link">
+                        Check The Repo
+                    </a>
+                </li>
+            </ul>
         </div>
     );
 }

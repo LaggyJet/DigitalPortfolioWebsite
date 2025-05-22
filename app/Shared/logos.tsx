@@ -20,7 +20,7 @@ export const TheGrittyLogo: React.FC<LogoProps> = ({ className }) => (
 
 export const FSFlightSimLogo: React.FC<LogoProps> = ({ className }) => (
     <img
-        src="/logos/fsflightsim.svg"
+        src="/logos/FSFlightSim.png"
         alt="FS Flight Sim Logo"
         width={size}
         height={size}
@@ -30,7 +30,7 @@ export const FSFlightSimLogo: React.FC<LogoProps> = ({ className }) => (
 
 export const DTDragonsLogo: React.FC<LogoProps> = ({ className }) => (
     <img
-        src="/logos/dtdragons.svg"
+        src="/logos/DTDragons.png"
         alt="DT Dragons Logo"
         width={size}
         height={size}
@@ -38,10 +38,10 @@ export const DTDragonsLogo: React.FC<LogoProps> = ({ className }) => (
     />
 );
 
-export const SensoryPanelLogo: React.FC<LogoProps> = ({ className }) => (
+export const SensoryPanelsLogo: React.FC<LogoProps> = ({ className }) => (
     <img
-        src="/logos/sensorypanel.svg"
-        alt="Sensory Panel Logo"
+        src="/logos/SensoryPanels.png"
+        alt="Sensory Panels Logo"
         width={size}
         height={size}
         className={className || 'icon'}
