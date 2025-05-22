@@ -23,8 +23,7 @@
 }
 
 .menu {
-    @apply fixed top-[5.5vh] left-[-16vw] w-[16vw] bg-black/80 flex flex-col px-[2vw] py-[4vh] gap-[2vh] transition-all duration-300 z-[1000];
-    height: 94.5vh;
+    @apply fixed top-[5.5vh] left-[-16vw] w-[16vw] h-[94.5vh] bg-black/80 flex flex-col px-[2vw] py-[4vh] gap-[2vh] transition-all duration-300 z-[1000];
 }
 
 .linksContainer {
@@ -33,7 +32,7 @@
 
 .resumeSection {
     @apply mt-auto pt-[1vh] border-t border-white/20 flex justify-center;
-    margin-bottom: -2rem;
+    margin-bottom: -2.0rem;
 }
 
 .resumeButton {
@@ -103,9 +102,9 @@
 
     .menu {
         @apply w-[60vw] left-[-60vw] top-[6vh];
-        max-height: 100vh;
-        overflow-y: auto;
+        bottom: 0;
         height: auto;
+        overflow-y: auto;
     }
 
     .open {
