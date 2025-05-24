@@ -1,7 +1,7 @@
 'use client';
 
 import './globals.css';
-import { ButtonAnimationDelay, formatTitleFromPath } from './Components/HelperFunctions';
+import { ButtonAnimationDelay, FormatTitleFromPath } from './Components/HelperFunctions';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Header from './Menu/Header';
@@ -10,7 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     const pathname = usePathname();
     const [title, setTitle] = useState('JF Portfolio');
     useEffect(() => {
-        setTitle(`${formatTitleFromPath(pathname)} - JF Portfolio`);
+        setTitle(`${FormatTitleFromPath(pathname)} - JF Portfolio`);
     }, [pathname]);
     useEffect(() => {
         document.title = title;
@@ -29,7 +29,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </head>
             <body style={{ backgroundColor: "#151517" }}>
                 <Header />
-                <div className="background">
+                <div className="background" />
+                <div className="relative z-10 min-h-screen">
                     {children}
                 </div>
                 <ButtonAnimationDelay />

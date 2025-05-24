@@ -15,7 +15,7 @@ export function ButtonAnimationDelay() {
     return null;
 }
 
-export function formatTitleFromPath(path: string): string {
+export function FormatTitleFromPath(path: string): string {
     if (path === '/' || path === '') return 'Home';
     if (path.endsWith('/')) path = path.slice(0, -1);
     const parts = path.split('/');

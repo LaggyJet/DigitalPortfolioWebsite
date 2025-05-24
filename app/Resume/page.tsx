@@ -9,7 +9,7 @@ export default function ContactPage() {
                 </a>
                 <br></br>
             </h1>
-            <embed src="/JF-Resume.pdf" type="application/pdf" width="100%" height="100%" />
+            <embed className="pdf-embed" src="/JF-Resume.pdf" type="application/pdf" />
         </div>
     );
 }

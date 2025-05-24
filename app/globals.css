@@ -10,23 +10,47 @@
     @apply m-0 p-0 box-border;
 }
 
+html,
 body {
-    @apply overflow-x-hidden overflow-y-auto bg-[#f0f0f0] text-[#151517] font-sans;
+    height: 100%;
 }
 
-/* Prevent scrolling during animation */
+body {
+    @apply bg-[#f0f0f0] text-[#151517] font-sans;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+html,
+body,
+#__next {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#__next::-webkit-scrollbar {
+    display: none;
+}
+
 body.animating {
     overflow: hidden;
     height: 100vh;
 }
 
 .background {
-    @apply min-h-screen bg-[#151517] bg-[url('/MainBackground.png')] bg-no-repeat bg-center bg-fixed bg-cover flex justify-center items-center;
-    animation: fadeIn 1s ease-out both;
+    @apply fixed top-0 left-0 w-screen h-screen z-0 bg-[#151517] bg-[url('/MainBackground.png')] bg-no-repeat bg-center bg-fixed bg-cover;
 }
 
 .container {
-    @apply h-[calc(100vh-6.5vh)] p-[2vw] flex flex-col items-center justify-center text-center box-border w-full max-w-[900px] mx-auto pt-[6.5vh] pb-[2vh];
+    @apply min-h-[calc(100vh-6.5vh)] overflow-auto p-[2vw] pt-[12vh] pb-[2vh] flex flex-col items-center justify-start text-center box-border w-full max-w-[900px] mx-auto;
     animation: fadeIn 1s ease-out both;
     animation-delay: 0.4s;
 }
@@ -166,6 +190,14 @@ body.animating {
     display: block;
 }
 
+.pdf-embed {
+    width: 100%;
+    height: 90vh;
+    margin: 0 auto;
+    display: block;
+    border: none;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -222,7 +254,7 @@ body.animating {
     }
 
     .container {
-        @apply min-h-[calc(100svh-6.5vh)] pt-[6.5vh] pb-[2vh] px-6;
+        @apply min-h-[calc(100svh-10vh)] pt-[10vh] pb-[2vh] px-6;
     }
 
     .title {

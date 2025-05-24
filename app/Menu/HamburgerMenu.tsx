@@ -62,29 +62,37 @@ export default function HamburgerMenu({ className }: HamburgerMenuProps) {
                             const isActive = path === '/Projects'
                                 ? pathname.toLowerCase().startsWith('/projects')
                                 : pathname === path;
-                            return (
-                                <div key={path}>
-                                    <button
-                                        className={`${styles.link} ${isActive ? styles.active : ''}`}
-                                        onClick={() => {
-                                            if (isProjects) {
-                                                toggleProjects();
-                                            } else {
-                                                router.push(path);
-                                                setIsOpen(false);
-                                                setShowProjects(false);
-                                            }
-                                        }}
-                                    >
-                                        {label}
-                                        {isProjects &&
-                                            (showProjects ? (
+                            if (isProjects) {
+                                return (
+                                    <div key={path} className={styles.projectsWrapper}>
+                                        <button
+                                            className={`${styles.link} ${isActive ? styles.active : ''}`}
+                                            onClick={e => {
+                                                const labelSpan = e.currentTarget.querySelector(`.${styles.linkLabel}`) as HTMLElement;
+                                                const bounds = labelSpan?.getBoundingClientRect();
+                                                const tolerance = 10;
+                                                const isOnLabel =
+                                                    bounds &&
+                                                    e.clientX >= bounds.left - tolerance &&
+                                                    e.clientX <= bounds.right + tolerance &&
+                                                    e.clientY >= bounds.top - tolerance &&
+                                                    e.clientY <= bounds.bottom + tolerance;
+                                                if (isOnLabel) {
+                                                    router.push(path);
+                                                    setIsOpen(false);
+                                                    setShowProjects(false);
+                                                } else {
+                                                    toggleProjects();
+                                                }
+                                            }}
+                                        >
+                                            <span className={styles.linkLabel}>{label}</span>
+                                            {showProjects ? (
                                                 <UpArrow className={styles.arrow} />
                                             ) : (
                                                 <DownArrow className={styles.arrow} />
-                                            ))}
-                                    </button>
-                                    {isProjects && (
+                                            )}
+                                        </button>
                                         <div className={`${styles.submenu} ${showProjects ? styles.submenuOpen : ''}`}>
                                             <div className={styles.submenuInner}>
                                                 {projectSubLinks.map(({ label, path }) => (
@@ -103,8 +111,21 @@ export default function HamburgerMenu({ className }: HamburgerMenuProps) {
                                                 ))}
                                             </div>
                                         </div>
-                                    )}
-                                </div>
+                                    </div>
+                                );
+                            }
+                            return (
+                                <button
+                                    key={path}
+                                    className={`${styles.link} ${isActive ? styles.active : ''}`}
+                                    onClick={() => {
+                                        router.push(path);
+                                        setIsOpen(false);
+                                        setShowProjects(false);
+                                    }}
+                                >
+                                    {label}
+                                </button>
                             );
                         })}
                     </div>
