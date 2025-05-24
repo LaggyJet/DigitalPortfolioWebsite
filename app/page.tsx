@@ -26,6 +26,9 @@ export default function HomePage() {
             <p className="description">
                 Feel free to explore my work.
             </p>
+            <p className="description" style={{ textDecoration: 'underline' }}>
+                Note: This website is still actively being worked on
+            </p>
             <div className="buttonRow">
                 {buttons.map(({ label, href, icon}) =>
                     (
