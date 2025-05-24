@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
-import { HamburgerIcon, DownArrow, UpArrow } from '../Shared/icons';
+import { HamburgerIcon, DownArrow, RightArrow } from '../Shared/icons';
 import styles from './HamburgerMenu.module.css';
 
 interface HamburgerMenuProps {
@@ -87,11 +87,13 @@ export default function HamburgerMenu({ className }: HamburgerMenuProps) {
                                             }}
                                         >
                                             <span className={styles.linkLabel}>{label}</span>
-                                            {showProjects ? (
-                                                <UpArrow className={styles.arrow} />
-                                            ) : (
-                                                <DownArrow className={styles.arrow} />
-                                            )}
+                                            <span style={{ marginLeft: '40%' }}>
+                                                {showProjects ? (
+                                                    <DownArrow className={styles.arrow} />
+                                                ) : (
+                                                    <RightArrow className={styles.arrow} />
+                                                )}
+                                            </span>
                                         </button>
                                         <div className={`${styles.submenu} ${showProjects ? styles.submenuOpen : ''}`}>
                                             <div className={styles.submenuInner}>
