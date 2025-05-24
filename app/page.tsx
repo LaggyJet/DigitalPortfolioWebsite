@@ -15,7 +15,7 @@ export default function HomePage() {
         <div className="container">
             <h1 className="title">Joshua Furber</h1>
             <p className="description">
-                Simulation and Visualization Engineering
+                Simulation and Visualization Developer
             </p>
             <p className="description">
                 Raised in Florida, I've been fascinated by technology since high school, when I first started programming.

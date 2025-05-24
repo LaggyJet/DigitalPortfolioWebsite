@@ -14,13 +14,19 @@ body {
     @apply overflow-x-hidden overflow-y-auto bg-[#f0f0f0] text-[#151517] font-sans;
 }
 
+/* Prevent scrolling during animation */
+body.animating {
+    overflow: hidden;
+    height: 100vh;
+}
+
 .background {
-    @apply min-h-screen bg-[#151517] bg-[url('/MainBackground.png')] bg-no-repeat bg-center bg-fixed bg-cover flex justify-center items-center pt-[6.5vh];
+    @apply min-h-screen bg-[#151517] bg-[url('/MainBackground.png')] bg-no-repeat bg-center bg-fixed bg-cover flex justify-center items-center;
     animation: fadeIn 1s ease-out both;
 }
 
 .container {
-    @apply h-[calc(100vh-6.5vh)] p-[2vw] flex flex-col items-center justify-center text-center box-border w-full max-w-[900px] mx-auto;
+    @apply h-[calc(100vh-6.5vh)] p-[2vw] flex flex-col items-center justify-center text-center box-border w-full max-w-[900px] mx-auto pt-[6.5vh] pb-[2vh];
     animation: fadeIn 1s ease-out both;
     animation-delay: 0.4s;
 }
@@ -217,10 +223,6 @@ body {
 
     .container {
         @apply min-h-[calc(100svh-6.5vh)] pt-[6.5vh] pb-[2vh] px-6;
-    }
-
-    .background {
-        @apply pt-[6.5vh] pb-[2vh];
     }
 
     .title {

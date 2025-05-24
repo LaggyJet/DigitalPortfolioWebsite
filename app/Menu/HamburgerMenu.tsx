@@ -16,14 +16,12 @@ export default function HamburgerMenu({ className }: HamburgerMenuProps) {
     const menuRef = useRef<HTMLDivElement>(null);
     const router = useRouter();
     const pathname = usePathname();
-
     const navLinks = [
         { label: 'Home', path: '/' },
         { label: 'Skills & Experience', path: '/Skills-Experience' },
         { label: 'Projects', path: '/Projects' },
         { label: 'Contact', path: '/Contact' },
     ];
-
     useEffect(() => {
         fetch('/api/projects')
             .then(res => res.json())
@@ -39,7 +37,6 @@ export default function HamburgerMenu({ className }: HamburgerMenuProps) {
                 console.error('Failed to load project list', err);
             });
     }, []);
-
     useEffect(() => {
         const handleClickOutside = (e: MouseEvent) => {
             if (isOpen && menuRef.current && !menuRef.current.contains(e.target as Node)) {
@@ -50,10 +47,8 @@ export default function HamburgerMenu({ className }: HamburgerMenuProps) {
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, [isOpen]);
-
     const toggleMenu = () => setIsOpen(v => !v);
     const toggleProjects = () => setShowProjects(v => !v);
-
     return (
         <header className={styles.header}>
             <div ref={menuRef} className={styles.wrapper}>
@@ -91,20 +86,22 @@ export default function HamburgerMenu({ className }: HamburgerMenuProps) {
                                     </button>
                                     {isProjects && (
                                         <div className={`${styles.submenu} ${showProjects ? styles.submenuOpen : ''}`}>
-                                            {projectSubLinks.map(({ label, path }) => (
-                                                <button
-                                                    key={path}
-                                                    className={styles.sublink}
-                                                    onClick={() => {
-                                                        router.push(path);
-                                                        setIsOpen(false);
-                                                        setShowProjects(false);
-                                                    }}
-                                                    disabled={!showProjects}
-                                                >
-                                                    {label}
-                                                </button>
-                                            ))}
+                                            <div className={styles.submenuInner}>
+                                                {projectSubLinks.map(({ label, path }) => (
+                                                    <button
+                                                        key={path}
+                                                        className={styles.sublink}
+                                                        onClick={() => {
+                                                            router.push(path);
+                                                            setIsOpen(false);
+                                                            setShowProjects(false);
+                                                        }}
+                                                        disabled={!showProjects}
+                                                    >
+                                                        {label}
+                                                    </button>
+                                                ))}
+                                            </div>
                                         </div>
                                     )}
                                 </div>

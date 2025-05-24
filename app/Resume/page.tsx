@@ -7,6 +7,7 @@ export default function ContactPage() {
                 <a className="button" href="/JF-Resume.pdf" download>
                     Download Resume
                 </a>
+                <br></br>
             </h1>
             <embed src="/JF-Resume.pdf" type="application/pdf" width="100%" height="100%" />
         </div>

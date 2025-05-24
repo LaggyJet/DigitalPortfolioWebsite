@@ -16,12 +16,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         document.title = title;
     }, [title]);
     useEffect(() => {
-        document.documentElement.style.overflow = 'hidden';
-        document.body.style.overflow = 'hidden';
+        document.body.classList.add('animating');
         const timeout = setTimeout(() => {
-            document.documentElement.style.overflow = '';
-            document.body.style.overflow = '';
-        }, 1000);
+            document.body.classList.remove('animating');
+        }, 1000); 
         return () => clearTimeout(timeout);
     }, []);
     return (
@@ -29,9 +27,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <head>
                 <title>{title}</title>
             </head>
-            <body style={{ backgroundColor: "#151517", overflowY:"scroll" }}>
+            <body style={{ backgroundColor: "#151517" }}>
                 <Header />
-                <div className="background">{children}</div>
+                <div className="background">
+                    {children}
+                </div>
                 <ButtonAnimationDelay />
             </body>
         </html>

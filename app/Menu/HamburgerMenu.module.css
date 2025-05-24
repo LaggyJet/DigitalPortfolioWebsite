@@ -32,7 +32,7 @@
 
 .resumeSection {
     @apply mt-auto pt-[1vh] border-t border-white/20 flex justify-center;
-    margin-bottom: -2.0rem;
+    margin-bottom: -3vh;
 }
 
 .resumeButton {
@@ -68,16 +68,37 @@
 }
 
 .submenuOpen {
-    @apply max-h-[50vh] opacity-100 translate-y-0 mt-4 pl-[1.2rem] ml-[1vw] pointer-events-auto select-auto relative;
+    max-height: 50vh;
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 1rem;
+    margin-left: 0.7rem;
+    pointer-events: auto;
+    user-select: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.submenuOpen::before {
-    content: '';
-    @apply absolute left-0 top-0 bottom-0 w-[2px] bg-[#D5C7FF] rounded-sm;
+.submenuInner {
+    position: relative;
+    max-height: 50vh;
+    overflow-y: auto;
+    padding-left: 0.2rem;
+    border-left: 2px solid #D5C7FF;
+    border-radius: 2px 0 0 2px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    @apply flex flex-col
+}
+
+.submenuInner::-webkit-scrollbar {
+    display: none;
 }
 
 .sublink {
-    @apply bg-none border-none text-white text-left text-[1rem] py-2 cursor-pointer;
+    @apply bg-none border-none text-white text-left text-[1rem] py-2 cursor-pointer w-full;
+    padding-left: 0.75rem;
 }
 
 .sublink:hover {
@@ -135,15 +156,15 @@
         padding-left: 20px;
     }
 
-    .submenuOpen::before {
-        margin-left: 30px;
+    .submenuOpen {
+        margin-left: 16.5%;
     }
 
     .resumeSection {
-            padding-top: 5.5%;
-            margin-bottom: -0.0rem;
-            margin-right: 8%;
-        }
+        padding-top: 5.5%;
+        margin-bottom: 0;
+        margin-right: 8%;
+    }
 }
 
 @layer utilities {
