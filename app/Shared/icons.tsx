@@ -36,11 +36,12 @@ export const DownArrow = ({ className }: IconProps) => (
     </svg>
 );
 
-export const UpArrow = ({ className }: IconProps) => (
+export const LeftArrow = ({ className }: IconProps) => (
     <svg {...baseSvgProps} className={className || 'icon'}>
-        <path d="M18 15l-6-6-6 6" />
+        <path d="M15 18l-6-6 6-6" />
     </svg>
 );
+
 
 export const LinkedInIcon = ({ className }: IconProps) => (
     <svg
