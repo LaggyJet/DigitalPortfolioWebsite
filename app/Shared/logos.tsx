@@ -8,6 +8,26 @@ interface LogoProps {
 
 const size = 32;
 
+export const DTDragonsLogo: React.FC<LogoProps> = ({ className }) => (
+    <img
+        src="/logos/DTDragons.png"
+        alt="DT Dragons Logo"
+        width={size}
+        height={size}
+        className={className || 'icon'}
+    />
+);
+
+export const StewartPlatformLogo: React.FC<LogoProps> = ({ className }) => (
+    <img
+        src="/logos/StewartPlatform.png"
+        alt="Stewart Platform Logo"
+        width={size}
+        height={size}
+        className={className || 'icon'}
+    />
+);
+
 export const TheGrittyLogo: React.FC<LogoProps> = ({ className }) => (
     <img
         src="/logos/TheGritty.png"
@@ -22,16 +42,6 @@ export const FSFlightSimLogo: React.FC<LogoProps> = ({ className }) => (
     <img
         src="/logos/FSFlightSim.png"
         alt="FS Flight Sim Logo"
-        width={size}
-        height={size}
-        className={className || 'icon'}
-    />
-);
-
-export const DTDragonsLogo: React.FC<LogoProps> = ({ className }) => (
-    <img
-        src="/logos/DTDragons.png"
-        alt="DT Dragons Logo"
         width={size}
         height={size}
         className={className || 'icon'}
