@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-export default function TheGrittyPage() {
+export default function StewartPlatformPage() {
     return (
         <div className="container">
             <h1 className="title" style={{ textDecoration: 'underline' }}>Stewart Platform</h1>

@@ -1,10 +1,11 @@
 'use client';
 
-export default function TheGrittyPage() {
+export default function DTDragonsPage() {
     return (
         <div className="container">
             <h1 className="title" style={{ textDecoration: 'underline' }}>DT Dragons</h1>
             {// Make sure to fill with actual vid
+            <p className="description" style={{ textDecoration: 'underline' }}>Video Coming Soon</p>
             /* <div className="responsive-iframe-wrapper">
                 <iframe
                     src="https://drive.google.com/file/d/1XCC311gdZKthu9LPcfaamjuV17aUrONC/preview"
