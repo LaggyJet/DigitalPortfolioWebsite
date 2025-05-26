@@ -16,8 +16,6 @@ export default function SkillsExperiencePage() {
             <li>Certifications: Autodesk Inventor, Fusion 360, AutoCAD</li>
             <li>Other Skills: AGILE development using Trello and Jira, Strong written and verbal communication abilities</li>
         </ul>
-
-
         <h1 className="title">Experience</h1>
         <p className="description">
             Internship at AVT Simulation: Used C++ and Qt Creator
