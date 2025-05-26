@@ -13,36 +13,27 @@
 html,
 body {
     height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
 }
 
 body {
     @apply bg-[#f0f0f0] text-[#151517] font-sans;
-    overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
 
-body::-webkit-scrollbar {
-    display: none;
-}
-
-html,
-body,
-#__next {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-html::-webkit-scrollbar,
 body::-webkit-scrollbar,
-#__next::-webkit-scrollbar {
+html::-webkit-scrollbar {
     display: none;
 }
 
 body.animating {
-    overflow: hidden;
-    height: 100vh;
+    overflow: hidden !important;
+    height: 100vh !important;
+    position: fixed;
+    width: 100%;
 }
 
 .background {
@@ -80,7 +71,7 @@ body.animating {
 }
 
 .sublist li {
-    margin-bottom: 1.2vw; 
+    margin-bottom: 1.2vw;
 }
 
 .section {
@@ -101,6 +92,13 @@ body.animating {
 
 .icon {
     @apply w-6 h-6 pointer-events-none transition-colors duration-300 ease-in-out fill-[#5F4F8C];
+    width: 1.25vw;
+    height: 1.25vw;
+    margin-left: 0.5vw;
+    vertical-align: middle;
+    min-width: 16px;
+    min-height: 16px;
+    transition: width 0.3s ease, height 0.3s ease;
 }
 
 .buttonRow {
@@ -121,10 +119,6 @@ body.animating {
     font-size: clamp(0.9rem, 1.1vw, 1.1rem);
 }
 
-.button.back {
-    margin-left: 1vw;
-}
-
 .button:hover,
 .button:focus {
     @apply bg-[#d5c7ff] text-black outline-none;
@@ -136,12 +130,12 @@ body.animating {
 }
 
 .link {
-    @apply text-[#b094ff] underline transition-colors duration-250 ease-in-out cursor-pointer;
+    @apply text-[#d5c7ff] underline transition-colors duration-250 ease-in-out cursor-pointer;
 }
 
 .link:hover,
 .link:focus {
-    @apply text-[#d5c7ff] underline outline-none;
+    @apply text-[#b094ff] underline outline-none;
 }
 
 .link:focus-visible {
@@ -149,14 +143,154 @@ body.animating {
     outline-offset: 2px;
 }
 
-.icon {
-    width: 1.25vw;
-    height: 1.25vw;
-    margin-left: 0.5vw;
-    vertical-align: middle;
-    min-width: 16px;
-    min-height: 16px;
-    transition: width 0.3s ease, height 0.3s ease;
+.projectsHeader {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 3.5rem;
+}
+
+.projectsHeader>.title {
+    margin: 0;
+    z-index: 1;
+    text-align: center;
+    flex-shrink: 0;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.filterWrapper {
+    position: absolute;
+    z-index: 2;
+    right: 3rem;
+    top: 60%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 90vw;
+    flex-wrap: nowrap;
+}
+
+.filterLabel {
+    color: white;
+    line-height: 2.5rem;
+    white-space: nowrap;
+}
+
+.tagFilterSelect {
+    width: 100%;
+    max-width: 10rem;
+    min-width: 8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: rgba(176, 148, 255, 0.15);
+    border: 0.15vw solid #b094ff;
+    border-radius: 1vw;
+    padding: 0.9vw 1.8vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    font-family: inherit;
+    appearance: none;
+    color: white;
+    box-sizing: border-box;
+}
+
+.tagFilterSelect:hover,
+.tagFilterSelect:focus {
+    background-color: #d5c7ff;
+    color: black;
+    outline: none;
+}
+
+.tagFilterSelect:focus-visible {
+    outline: 3px solid #b094ff;
+    outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+    .iconRow {
+        @apply gap-4 mt-4;
+    }
+
+    .iconWrapper {
+        @apply w-9 h-9 p-2;
+    }
+
+    .icon {
+        @apply w-5 h-5 ml-2;
+    }
+
+    .button {
+        font-size: 1rem !important;
+        padding: 0.8rem 1.4rem !important;
+        gap: 8px !important;
+        border-width: 2px !important;
+        border-radius: 12px !important;
+        white-space: normal !important;
+        justify-content: center !important;
+    }
+
+    .buttonRow {
+        @apply gap-4;
+    }
+
+    .list li {
+        margin-bottom: 1rem;
+    }
+
+    .container {
+        @apply min-h-[calc(100svh-10vh)] pt-[10vh] pb-[2vh] px-6;
+    }
+
+    .title {
+        font-size: 2rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .description,
+    .list {
+        @apply max-w-full;
+        font-size: 1.1rem !important;
+    }
+
+    .projectsHeader {
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 0;
+        gap: 0.75rem;
+    }
+
+    .projectsHeader>.title {
+        order: 1;
+        width: 100%;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .filterWrapper {
+        position: relative;
+        order: 2;
+        justify-content: center;
+        width: auto;
+        gap: 0.5rem;
+        padding: 0 1rem;
+    }
+
+    .filterLabel {
+        line-height: 1.5;
+    }
+
+    .tagFilterSelect {
+        max-width: 12rem;
+        width: auto;
+    }
 }
 
 :root {
@@ -227,52 +361,5 @@ body.animating {
     to {
         opacity: 1;
         transform: translateX(0);
-    }
-}
-
-@media (max-width: 600px) {
-    .iconRow {
-        @apply gap-4 mt-4;
-    }
-
-    .iconWrapper {
-        @apply w-9 h-9 p-2;
-    }
-
-    .icon {
-        @apply w-5 h-5 ml-2;
-    }
-
-    .button {
-        font-size: 1rem !important;
-        padding: 0.8rem 1.4rem !important;
-        gap: 8px !important;
-        border-width: 2px !important;
-        border-radius: 12px !important;
-        white-space: normal !important;
-        justify-content: center !important;
-    }
-
-    .buttonRow {
-        @apply gap-4;
-    }
-
-    .list li {
-        margin-bottom: 1rem;
-    }
-
-    .container {
-        @apply min-h-[calc(100svh-10vh)] pt-[10vh] pb-[2vh] px-6;
-    }
-
-    .title {
-        font-size: 2rem !important;
-        margin-bottom: 1rem !important;
-    }
-
-    .description,
-    .list {
-        @apply max-w-full;
-        font-size: 1.1rem !important;
     }
 }

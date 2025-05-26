@@ -57,3 +57,13 @@ export const SensoryPanelsLogo: React.FC<LogoProps> = ({ className }) => (
         className={className || 'icon'}
     />
 );
+
+export const SimonSenseLogo: React.FC<LogoProps> = ({ className }) => (
+    <img
+        src="/logos/SimonSense.png"
+        alt="Simon Sense Logo"
+        width={size}
+        height={size}
+        className={className || 'icon'}
+    />
+);

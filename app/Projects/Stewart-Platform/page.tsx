@@ -1,7 +1,5 @@
 'use client';
 
-import Image from "next/image";
-
 export default function StewartPlatformPage() {
     return (
         <div className="container">
@@ -22,8 +20,13 @@ export default function StewartPlatformPage() {
                 <li>Hand-soldered and assembled the PCB components for the control system.</li>
                 <li>Implemented Bluetooth communication for wireless control. See the FS FlightSim project for detailed integration.</li>
                 <li>
-                    <a href="https://github.com/LaggyJet/" className="link">
-                        Check The Repo (Not currently Available)
+                    <a
+                        href="https://github.com/LaggyJet/StewartPlatform"
+                        className="link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Check The Repo
                     </a>
                 </li>
             </ul>

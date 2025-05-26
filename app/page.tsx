@@ -26,8 +26,11 @@ export default function HomePage() {
             <p className="description">
                 Feel free to explore my work.
             </p>
-            <p className="description" style={{ textDecoration: 'underline' }}>
+            <p className="description" style={{ color: 'orange', fontWeight: 'bold', textDecoration: 'underline' }}>
                 Note: This website is still actively being worked on
+            </p>
+            <p className="description" style={{ fontSize: '0.85em' }}>
+                Some icons courtesy of <a href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noopener noreferrer">Freepik</a> from <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">Flaticon</a>
             </p>
             <div className="buttonRow">
                 {buttons.map(({ label, href, icon}) =>

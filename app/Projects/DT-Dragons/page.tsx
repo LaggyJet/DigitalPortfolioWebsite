@@ -29,7 +29,7 @@ export default function DTDragonsPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Download DTDragons MR Installer (Quest 3/3S)
+                        Download DT Dragons MR Installer (Quest 3/3S)
                     </a> 
                 </li>
                 <li>
