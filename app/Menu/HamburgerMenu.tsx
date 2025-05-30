@@ -25,7 +25,7 @@ export default function HamburgerMenu({ className }: HamburgerMenuProps) {
     useEffect(() => {
         fetch('/api/projects')
             .then(res => res.json())
-            .then((data: Record<string, string[]>) => {
+            .then((data: Record<string, string[][]>) => {
                 const folders = Object.keys(data);
                 setProjectSubLinks(
                     folders.map(folder => ({

@@ -48,9 +48,9 @@ export const FSFlightSimLogo: React.FC<LogoProps> = ({ className }) => (
     />
 );
 
-export const SensoryPanelsLogo: React.FC<LogoProps> = ({ className }) => (
+export const SensoryPanelLogo: React.FC<LogoProps> = ({ className }) => (
     <img
-        src="/logos/SensoryPanels.png"
+        src="/logos/SensoryPanel.png"
         alt="Sensory Panels Logo"
         width={size}
         height={size}

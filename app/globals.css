@@ -149,25 +149,24 @@ body.animating {
     margin-bottom: 2vw;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding-right: 3.5rem;
+    justify-content: center;
 }
 
 .projectsHeader>.title {
-    margin: 0;
     z-index: 1;
     text-align: center;
     flex-shrink: 0;
     padding: 0 1rem;
-    width: 100%;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .filterWrapper {
     position: absolute;
     z-index: 2;
     right: 3rem;
-    top: 60%;
+    top: 50%;
     transform: translateY(-50%);
     display: flex;
     align-items: center;
@@ -212,6 +211,14 @@ body.animating {
 .tagFilterSelect:focus-visible {
     outline: 3px solid #b094ff;
     outline-offset: 2px;
+}
+
+.focusGroup {
+    @apply flex flex-col items-center text-center gap-[1vw] mt-[2vw] mb-[1vw] w-full;
+}
+
+.focusHeading {
+    @apply text-white font-bold text-[1.6rem] mb-[0.5vw] text-center;
 }
 
 @media (max-width: 600px) {
@@ -281,6 +288,7 @@ body.animating {
         width: auto;
         gap: 0.5rem;
         padding: 0 1rem;
+        right: 0rem;
     }
 
     .filterLabel {
@@ -290,6 +298,16 @@ body.animating {
     .tagFilterSelect {
         max-width: 12rem;
         width: auto;
+    }
+
+    .focusGroup {
+        @apply items-center text-center gap-4 mt-6 mb-4;
+    }
+
+    .focusHeading {
+        font-size: 1.25rem !important;
+        margin-bottom: 0.5rem !important;
+        text-align: center !important;
     }
 }
 

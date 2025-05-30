@@ -11,8 +11,9 @@ export default function SkillsExperiencePage() {
             <li>UI/UX Design: Interface prototyping and layout design using Figma and Qt Creator</li>
             <li>Hardware & Fabrication: Drill Press, Lathe, Belt Sander, Bandsaw, Chop Saw, Soldering</li>
             <li>Embedded Systems: Microcontroller-based development with Arduino, including hardware integration and real-time control</li>
-            <li>Strong Programming Languages: C++, C#, Python, Arduino</li>
-            <li>Intermediate Programming Languages: SQL</li>
+            <li>Strong Programming Languages: C++, C#, Python, Arduino, MATLAB, Unreal Script, VIM</li>
+            <li>Intermediate Programming Languages: SQL, HTML, CSS</li>
+            <li>Programming Languages I've worked with: Lua, Java, JS, TypeScript</li>
             <li>Certifications: Autodesk Inventor, Fusion 360, AutoCAD</li>
             <li>Other Skills: AGILE development using Trello and Jira, Strong written and verbal communication abilities</li>
         </ul>
