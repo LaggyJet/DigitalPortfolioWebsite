@@ -67,3 +67,33 @@ export const SimonSenseLogo: React.FC<LogoProps> = ({ className }) => (
         className={className || 'icon'}
     />
 );
+
+export const ESPGeoCacheLogo: React.FC<LogoProps> = ({ className }) => (
+    <img
+        src="/logos/ESPGeoCache.png"
+        alt="ESP GeoCache Logo"
+        width={size}
+        height={size}
+        className={className || 'icon'}
+    />
+)
+
+export const MotionBaseShuttleSimulatorLogo: React.FC<LogoProps> = ({ className }) => (
+    <img
+        src="/logos/MotionBaseShuttleSimulator.png"
+        alt="Motion Base Shuttle Simulator"
+        width={size}
+        height={size}
+        className={className || 'icon'}
+    />
+)
+
+export const DataVisualizerLogo: React.FC<LogoProps> = ({ className }) => (
+    <img
+        src="/logos/DataVisualizer.png"
+        alt="Data Visualizer"
+        width={size}
+        height={size}
+        className={className || 'icon'}
+    />
+)

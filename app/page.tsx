@@ -18,13 +18,7 @@ export default function HomePage() {
                 Simulation and Visualization Developer
             </p>
             <p className="description">
-                Raised in Florida, I've been fascinated by technology since high school, when I first started programming.
-            </p>
-            <p className="description">
-                I'm building a career in simulation and robotics, aiming to create practical, innovative solutions.
-            </p>
-            <p className="description">
-                Feel free to explore my work.
+                I combine deep knowledge of simulation and visualization software with practical experience in mechanical design and fabrication to deliver advanced training simulators and interactive platforms. By crafting custom hardware interfaces and controllers, I enhance user immersion and the overall realism of each project.
             </p>
             <p className="description" style={{ color: 'orange', fontWeight: 'bold', textDecoration: 'underline' }}>
                 Note: This website is still actively being worked on
