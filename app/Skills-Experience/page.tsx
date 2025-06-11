@@ -19,7 +19,11 @@ export default function SkillsExperiencePage() {
             </ul>
             <h1 className="title">Experience</h1>
             <ul className="list">
-                <li>Internship at AVT Simulation: Used C++ and Qt Creator</li>
+                <li>Internship at{' '}
+                    <a href="https://www.avtsim.com/" className="link" target="_blank" rel="noopener noreferrer">
+                        AVT Simulation
+                    </a>
+                    : Used C++ and Qt Creator</li>
                 <li>
                     <a href="https://expo.scsp.ai/" className="link" target="_blank" rel="noopener noreferrer">
                         AI+Expo Hackathon

@@ -19,6 +19,7 @@ export default function FPVDroneSimPage() {
             <ul className="list">
                 <li>Designed and built a drone simulation in Unreal Engine for real-time LiDAR scanning at dynamic points of interest.</li>
                 <li>Implemented scan data export for external visualization of 3D-mapped environments post-flight.</li>
+                <li>Team earned $15,000 prize.</li>
                 <li>
                     <a
                         href="https://github.com/LaggyJet/FPV-DroneSim"
