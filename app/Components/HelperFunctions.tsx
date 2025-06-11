@@ -4,23 +4,29 @@ import { useEffect } from 'react';
 
 export function ButtonAnimationDelay() {
     useEffect(() => {
-        const row = document.querySelector('.buttonRow');
-        if (!row) return;
-        const buttons = row.querySelectorAll('.button');
-        buttons.forEach((btn, i) => {
-            const element = btn as HTMLElement;
-            element.style.animationDelay = `${1.0 + 0.3 * i}s`;
-        });
+        const rows = document.querySelectorAll<HTMLElement>('.buttonRow');
+        for (let i = 0; i < rows.length; i++) {
+        const buttons = rows[i].querySelectorAll<HTMLElement>('.button');
+        for (let j = 0; j < buttons.length; j++) {
+            buttons[j].style.setProperty('animation-delay', `${1 + 0.3 * j}s`);
+        }
+        }
     }, []);
     return null;
 }
 
 export function FormatTitleFromPath(path: string): string {
-    if (path === '/' || path === '') return 'Home';
-    if (path.endsWith('/')) path = path.slice(0, -1);
-    const parts = path.split('/');
-    const lastSegment = parts[parts.length - 1];
-    return lastSegment.trim()
-    .replace(/[-_]/g, ' ')
-    .replace(/\b\w/g, (c) => c.toUpperCase());
+    if (typeof path !== 'string') return 'Home';
+    const clean = path.replace(/\/+$/, '').trim();
+    if (!clean || clean === '/') return 'Home';
+    const parts = clean.split('/').filter(Boolean);
+    const last = parts.pop();
+    if (!last) return 'Home';
+    return last
+        .replace(/[^a-zA-Z0-9-_]/g, '')
+        .replace(/[-_]+/g, ' ')
+        .split(' ')
+        .filter(Boolean)
+        .map((w) => w[0].toUpperCase() + w.slice(1).toLowerCase())
+        .join(' ');
 }

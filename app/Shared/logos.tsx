@@ -8,92 +8,23 @@ interface LogoProps {
 
 const size = 32;
 
-export const DTDragonsLogo: React.FC<LogoProps> = ({ className }) => (
+const LogoImage: React.FC<{ src: string; alt: string } & LogoProps> = ({ src, alt, className }) => (
     <img
-        src="/logos/DTDragons.png"
-        alt="DT Dragons Logo"
+        src={src}
+        alt={alt}
         width={size}
         height={size}
         className={className || 'icon'}
     />
 );
 
-export const StewartPlatformLogo: React.FC<LogoProps> = ({ className }) => (
-    <img
-        src="/logos/StewartPlatform.png"
-        alt="Stewart Platform Logo"
-        width={size}
-        height={size}
-        className={className || 'icon'}
-    />
-);
-
-export const TheGrittyLogo: React.FC<LogoProps> = ({ className }) => (
-    <img
-        src="/logos/TheGritty.png"
-        alt="The Gritty Logo"
-        width={size}
-        height={size}
-        className={className || 'icon'}
-    />
-);
-
-export const FSFlightSimLogo: React.FC<LogoProps> = ({ className }) => (
-    <img
-        src="/logos/FSFlightSim.png"
-        alt="FS Flight Sim Logo"
-        width={size}
-        height={size}
-        className={className || 'icon'}
-    />
-);
-
-export const SensoryPanelLogo: React.FC<LogoProps> = ({ className }) => (
-    <img
-        src="/logos/SensoryPanel.png"
-        alt="Sensory Panels Logo"
-        width={size}
-        height={size}
-        className={className || 'icon'}
-    />
-);
-
-export const SimonSenseLogo: React.FC<LogoProps> = ({ className }) => (
-    <img
-        src="/logos/SimonSense.png"
-        alt="Simon Sense Logo"
-        width={size}
-        height={size}
-        className={className || 'icon'}
-    />
-);
-
-export const ESPGeoCacheLogo: React.FC<LogoProps> = ({ className }) => (
-    <img
-        src="/logos/ESPGeoCache.png"
-        alt="ESP GeoCache Logo"
-        width={size}
-        height={size}
-        className={className || 'icon'}
-    />
-)
-
-export const MotionBaseShuttleSimulatorLogo: React.FC<LogoProps> = ({ className }) => (
-    <img
-        src="/logos/MotionBaseShuttleSimulator.png"
-        alt="Motion Base Shuttle Simulator"
-        width={size}
-        height={size}
-        className={className || 'icon'}
-    />
-)
-
-export const DataVisualizerLogo: React.FC<LogoProps> = ({ className }) => (
-    <img
-        src="/logos/DataVisualizer.png"
-        alt="Data Visualizer"
-        width={size}
-        height={size}
-        className={className || 'icon'}
-    />
-)
+export const DTDragonsLogo = (props: LogoProps) => <LogoImage src="/logos/DTDragons.png" alt="DT Dragons Logo" {...props} />;
+export const StewartPlatformLogo = (props: LogoProps) => <LogoImage src="/logos/StewartPlatform.png" alt="Stewart Platform Logo" {...props} />;
+export const TheGrittyLogo = (props: LogoProps) => <LogoImage src="/logos/TheGritty.png" alt="The Gritty Logo" {...props} />;
+export const FSFlightSimLogo = (props: LogoProps) => <LogoImage src="/logos/FSFlightSim.png" alt="FS Flight Sim Logo" {...props} />;
+export const ArborSensoryPanelsLogo = (props: LogoProps) => <LogoImage src="/logos/ArborSensoryPanels.png" alt="Arbor Sensory Panels Logo" {...props} />;
+export const SimonSenseLogo = (props: LogoProps) => <LogoImage src="/logos/SimonSense.png" alt="Simon Sense Logo" {...props} />;
+export const ESPGeoCacheLogo = (props: LogoProps) => <LogoImage src="/logos/ESPGeoCache.png" alt="ESP GeoCache Logo" {...props} />;
+export const MotionBaseShuttleSimulatorLogo = (props: LogoProps) => <LogoImage src="/logos/MotionBaseShuttleSimulator.png" alt="Motion Base Shuttle Simulator" {...props} />;
+export const DataVisualizerLogo = (props: LogoProps) => <LogoImage src="/logos/DataVisualizer.png" alt="Data Visualizer" {...props} />;
+export const FPVDroneSimLogo = (props: LogoProps) => <LogoImage src="/logos/FPVDroneSim.png" alt="FPV Drone Simulator" {...props} />;

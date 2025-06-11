@@ -20,7 +20,8 @@ export default function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.iconWrapper}
-                >
+                    aria-label="GitHub"
+                    >
                     <GitHubIcon className={styles.giticon} />
                 </a>
                 <a
@@ -28,7 +29,8 @@ export default function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.iconWrapper}
-                >
+                    aria-label="LinkedIn"
+                    >
                     <LinkedInIcon className={styles.linkicon} />
                 </a>
             </div>

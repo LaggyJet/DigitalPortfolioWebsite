@@ -9,9 +9,12 @@ export default function StewartPlatformPage() {
                     src="https://drive.google.com/file/d/1xu2SB3LwS-uU6-5gTOTYyoyaxYttQ502/preview"
                     allow="encrypted-media"
                     allowFullScreen
+                    title="Stewart Platform motion simulator video"
+                    loading="lazy"
+                    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
                 />
             </div>
-            <br></br>
+            <br />
             <ul className="list">
                 <li>Designed a fully custom 6-degree-of-freedom (6-DoF) Stewart platform motion simulator integrating mechanical design, electronics, and wireless control.</li>
                 <li>Modeled all mechanical parts in SolidWorks before fabrication to verify movement and ensure precise measurements.</li>

@@ -20,8 +20,8 @@ export default function ProjectsPage() {
     useEffect(() => {
         async function fetchProjects() {
             try {
-                const res = await fetch('/api/projects');
-                if (!res.ok) throw new Error('API returned an error');
+                const res = await fetch('/data/projects-data.json');
+                if (!res.ok) throw new Error('Failed to fetch projects data');
                 const data: Record<string, ProjectData> = await res.json();
                 const names = Object.keys(data);
                 const allTags = new Set<string>();

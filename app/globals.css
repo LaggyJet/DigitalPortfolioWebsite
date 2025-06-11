@@ -106,7 +106,12 @@ body.animating {
 }
 
 .buttonRow>.button {
-    opacity: 0;
+    opacity: 1;
+    animation: none;
+}
+
+.button.animate-in {
+    opacity: 1;
     animation-name: fadeInLeftToRight;
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -114,7 +119,7 @@ body.animating {
 }
 
 .button {
-    @apply flex items-center gap-[0.6vw] px-[1.8vw] py-[0.9vw] border-[0.15vw] border-[#b094ff] bg-transparent text-white rounded-[1vw] cursor-pointer transition-colors duration-300 ease-in-out whitespace-nowrap no-underline;
+    @apply flex items-center gap-[0.6vw] px-[1.8vw] py-[0.9vw] border-[0.15vw] border-[#b094ff] text-white rounded-[1vw] cursor-pointer transition-colors duration-300 ease-in-out whitespace-nowrap no-underline;
     background-color: rgba(176, 148, 255, 0.15);
     font-size: clamp(0.9rem, 1.1vw, 1.1rem);
 }
@@ -125,7 +130,9 @@ body.animating {
 }
 
 .button:focus-visible {
-    outline: 3px solid #b094ff;
+    @apply bg-[#d5c7ff] text-black outline-none outline-[#b094ff];
+    outline-style: solid;
+    outline-width: 3px;
     outline-offset: 2px;
 }
 
@@ -139,7 +146,9 @@ body.animating {
 }
 
 .link:focus-visible {
-    outline: 3px solid #b094ff;
+    @apply text-[#b094ff] underline outline-none outline-[#b094ff];
+    outline-style: solid;
+    outline-width: 3px;
     outline-offset: 2px;
 }
 
@@ -209,7 +218,9 @@ body.animating {
 }
 
 .tagFilterSelect:focus-visible {
-    outline: 3px solid #b094ff;
+    outline-style: solid;
+    outline-width: 3px;
+    outline-color: #b094ff;
     outline-offset: 2px;
 }
 

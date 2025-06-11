@@ -1,9 +1,9 @@
 'use client';
 
-export default function SensoryPanelPage() {
+export default function ArborSensoryPanelsPage() {
     return (
         <div className="container">
-            <h1 className="title" style={{ textDecoration: 'underline' }}>Sensory Panel</h1>
+            <h1 className="title" style={{ textDecoration: 'underline' }}>Arbor Sensory Panels</h1>
             {// Make sure to fill with actual vid
             <p className="description" style={{ textDecoration: 'underline' }}>Video Coming Soon</p>
             /* <div className="responsive-iframe-wrapper">
@@ -11,6 +11,9 @@ export default function SensoryPanelPage() {
                     src="https://drive.google.com/file/d/1XCC311gdZKthu9LPcfaamjuV17aUrONC/preview"
                     allow="encrypted-media"
                     allowFullScreen
+                    title="Sensory Panel project video"
+                    loading="lazy"
+                    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
                 />
             </div> */}
             <ul className="list">

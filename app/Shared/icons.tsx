@@ -6,44 +6,43 @@ interface IconProps {
     className?: string;
 }
 
-const baseSvgProps: React.SVGProps<SVGSVGElement> = {
+const lineIconProps: React.SVGProps<SVGSVGElement> = {
     xmlns: 'http://www.w3.org/2000/svg',
-    fill: 'none',             
-    stroke: 'currentColor',        
+    fill: 'none',
+    stroke: 'currentColor',
     strokeWidth: 2,
     strokeLinecap: 'round',
     strokeLinejoin: 'round',
     viewBox: '0 0 24 24',
 };
 
-export const HamburgerIcon = ({ className }: IconProps) => (
-    <svg {...baseSvgProps} className={className || 'icon'}>
+export const HamburgerIcon: React.FC<IconProps> = ({ className }) => (
+    <svg {...lineIconProps} className={className || 'icon'}>
         <line x1={3} y1={6} x2={21} y2={6} />
         <line x1={3} y1={12} x2={21} y2={12} />
         <line x1={3} y1={18} x2={21} y2={18} />
     </svg>
 );
 
-export const RightArrow = ({ className }: IconProps) => (
-    <svg {...baseSvgProps} className={className || 'icon'}>
+export const RightArrow: React.FC<IconProps> = ({ className }) => (
+    <svg {...lineIconProps} className={className || 'icon'}>
         <path d="M9 18l6-6-6-6" />
     </svg>
 );
 
-export const DownArrow = ({ className }: IconProps) => (
-    <svg {...baseSvgProps} className={className || 'icon'}>
+export const DownArrow: React.FC<IconProps> = ({ className }) => (
+    <svg {...lineIconProps} className={className || 'icon'}>
         <path d="M6 9l6 6 6-6" />
     </svg>
 );
 
-export const LeftArrow = ({ className }: IconProps) => (
-    <svg {...baseSvgProps} className={className || 'icon'}>
+export const LeftArrow: React.FC<IconProps> = ({ className }) => (
+    <svg {...lineIconProps} className={className || 'icon'}>
         <path d="M15 18l-6-6 6-6" />
     </svg>
 );
 
-
-export const LinkedInIcon = ({ className }: IconProps) => (
+export const LinkedInIcon: React.FC<IconProps> = ({ className }) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -54,7 +53,7 @@ export const LinkedInIcon = ({ className }: IconProps) => (
     </svg>
 );
 
-export const GitHubIcon = ({ className }: IconProps) => (
+export const GitHubIcon: React.FC<IconProps> = ({ className }) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"

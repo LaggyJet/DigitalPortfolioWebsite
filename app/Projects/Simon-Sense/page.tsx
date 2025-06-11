@@ -11,9 +11,12 @@ export default function SimonSensePage() {
                     src="https://drive.google.com/file/d/1XCC311gdZKthu9LPcfaamjuV17aUrONC/preview"
                     allow="encrypted-media"
                     allowFullScreen
+                    title="Simon Sense project video"
+                    loading="lazy"
+                    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
                 />
             </div> */}
-            <br></br>
+            <br />
             <ul className="list">
                 <li>Developed Simon Sense, a physical “Simon Says” memory game that uses gesture-based input by covering clear LEDs instead of pressing buttons.</li>
                 <li>Paired each RGBY output LED with a clear LED that detects when it is covered, enabling intuitive, touchless interaction.</li>

@@ -9,6 +9,9 @@ export default function TheGrittyPage() {
                     src="https://drive.google.com/file/d/1XCC311gdZKthu9LPcfaamjuV17aUrONC/preview"
                     allow="encrypted-media"
                     allowFullScreen
+                    title="The Gritty gameplay preview"
+                    loading="lazy"
+                    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
                 />
             </div>
             <ul className="list">
@@ -29,18 +32,18 @@ export default function TheGrittyPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                    Download The Gritty Installer
+                        Download The Gritty Installer
                     </a>
                 </li>
                 <li>
-                <a
-                    href="https://github.com/LaggyJet/TheGritty"
-                    className="link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Check The Repo
-                </a>
+                    <a
+                        href="https://github.com/LaggyJet/TheGritty"
+                        className="link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Check The Repo
+                    </a>
                 </li>
             </ul>
         </div>

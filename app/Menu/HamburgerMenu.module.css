@@ -89,7 +89,7 @@
     border-radius: 2px 0 0 2px;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    @apply flex flex-col
+    @apply flex flex-col;
 }
 
 .submenuInner::-webkit-scrollbar {
@@ -97,8 +97,7 @@
 }
 
 .sublink {
-    @apply bg-none border-none text-white text-left text-[1rem] py-2 cursor-pointer w-full;
-    padding-left: 0.75rem;
+    @apply bg-none border-none text-white text-left text-[1rem] py-2 cursor-pointer w-full pl-[0.75rem];
 }
 
 .sublink:hover {

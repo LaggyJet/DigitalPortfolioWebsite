@@ -11,6 +11,9 @@ export default function DataVisualizerPage() {
                     src="https://drive.google.com/file/d/1XCC311gdZKthu9LPcfaamjuV17aUrONC/preview"
                     allow="encrypted-media"
                     allowFullScreen
+                    title="Sensory Panel project video"
+                    loading="lazy"
+                    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
                 />
             </div> */}
             <ul className="list">

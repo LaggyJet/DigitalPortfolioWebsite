@@ -1,0 +1,82 @@
+{
+  "Arbor-Sensory-Panels": {
+    "mainFocus": "Fabrication & Parts Design",
+    "tags": [
+      "SolidWorks",
+      "Arduino",
+      "Unity",
+      "Eagle",
+      "Networking"
+    ]
+  },
+  "Data-Visualizer": {
+    "mainFocus": "Software Engineering",
+    "tags": [
+      "C++",
+      "Networking"
+    ]
+  },
+  "DT-Dragons": {
+    "mainFocus": "Immersive Technologies",
+    "tags": [
+      "Unreal Engine",
+      "C++",
+      "VR/AR"
+    ]
+  },
+  "ESP-GeoCache": {
+    "mainFocus": "Software Engineering",
+    "tags": [
+      "Arduino"
+    ]
+  },
+  "FPV-Drone-Sim": {
+    "mainFocus": "Immersive Technologies",
+    "tags": [
+      "Unreal Engine",
+      "C++"
+    ]
+  },
+  "FS-Flight-Sim": {
+    "mainFocus": "Software Engineering",
+    "tags": [
+      "Unity",
+      "C#",
+      "Arduino"
+    ]
+  },
+  "Motion-Base-Shuttle-Simulator": {
+    "mainFocus": "Immersive Technologies",
+    "tags": [
+      "Unreal Engine",
+      "C++",
+      "VR/AR",
+      "Networking"
+    ]
+  },
+  "Simon-Sense": {
+    "mainFocus": "Fabrication & Parts Design",
+    "tags": [
+      "Eagle",
+      "Arduino"
+    ]
+  },
+  "Stewart-Platform": {
+    "mainFocus": "Fabrication & Parts Design",
+    "tags": [
+      "Arduino",
+      "SolidWorks",
+      "Eagle",
+      "Networking"
+    ]
+  },
+  "The-Gritty": {
+    "mainFocus": "Software Engineering",
+    "tags": [
+      "Unity",
+      "C#",
+      "Arduino",
+      "Networking"
+    ]
+  }
+}

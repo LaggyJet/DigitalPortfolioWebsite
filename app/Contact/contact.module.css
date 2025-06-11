@@ -28,73 +28,73 @@
     .h-\[min\(6vw\,24px\)\] {
         height: min(6vw, 24px);
     }
-}
 
-.iconRow {
-    @apply flex justify-center;
-    gap: min(4vw, 1.5rem);
-    margin-top: min(3vh, 1rem);
-}
-
-.iconWrapper {
-    background-color: #B094FF;
-    border-radius: 9999px;
-    padding: min(2vw, 0.75rem);
-    @apply flex items-center justify-center;
-    width: min(12vw, 48px);
-    height: min(12vw, 48px);
-    transition: background-color 0.25s ease;
-    box-sizing: border-box;
-    transition-property: transform, background-color;
-    transition-duration: 0.2s;
-}
-
-.iconWrapper:hover {
-    background-color: #D5C7FF;
-    transform: scale(1.1);
-}
-
-.giticon {
-    width: min(6vw, 24px);
-    height: min(6vw, 24px);
-    fill: #5F4F8C;
-    transition: fill 0.25s ease;
-    pointer-events: none;
-    transform: scale(2.1);
-}
-
-.linkicon {
-    width: min(6vw, 24px);
-    height: min(6vw, 24px);
-    fill: #5F4F8C;
-    transition: fill 0.25s ease;
-    pointer-events: none;
-    transform: scale(1.5) translateX(-3%);
-}
-
-@media (max-width: 600px) {
     .iconRow {
-        gap: 5vw;
-        margin-top: 4vh;
+        @apply flex justify-center;
+        gap: min(4vw, 1.5rem);
+        margin-top: min(3vh, 1rem);
     }
 
     .iconWrapper {
-        width: 14vw;
-        height: 14vw;
-        padding: 3vw;
+        @apply flex items-center justify-center;
+        background-color: #B094FF;
+        border-radius: 9999px;
+        padding: min(2vw, 0.75rem);
+        width: min(12vw, 48px);
+        height: min(12vw, 48px);
+        box-sizing: border-box;
+        transition-property: transform, background-color;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
     }
 
-    .giticon,
-    .linkicon {
-        width: 7vw;
-        height: 7vw;
+    .iconWrapper:hover {
+        background-color: #D5C7FF;
+        transform: scale(1.1);
     }
 
     .giticon {
+        width: min(6vw, 24px);
+        height: min(6vw, 24px);
+        fill: #5F4F8C;
+        transition: fill 0.25s ease;
+        pointer-events: none;
         transform: scale(2.1);
     }
 
     .linkicon {
+        width: min(6vw, 24px);
+        height: min(6vw, 24px);
+        fill: #5F4F8C;
+        transition: fill 0.25s ease;
+        pointer-events: none;
         transform: scale(1.5) translateX(-3%);
+    }
+
+    @media (max-width: 600px) {
+        .iconRow {
+            gap: 5vw;
+            margin-top: 4vh;
+        }
+
+        .iconWrapper {
+            width: 14vw;
+            height: 14vw;
+            padding: 3vw;
+        }
+
+        .giticon,
+        .linkicon {
+            width: 7vw;
+            height: 7vw;
+        }
+
+        .giticon {
+            transform: scale(2.1);
+        }
+
+        .linkicon {
+            transform: scale(1.5) translateX(-3%);
+        }
     }
 }

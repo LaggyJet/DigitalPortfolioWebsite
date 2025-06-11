@@ -1,8 +1,9 @@
 {
     "private": true,
     "scripts": {
-        "dev": "next dev && vite out",
-        "build": "next build && next export",
+        "generate-projects": "node app/scripts/generate-projects-data.js",
+        "dev": "node app/scripts/generate-projects-data.js && next dev && vite out",
+        "build": "node app/scripts/generate-projects-data.js && next build && next export",
         "start": "next start"
     },
     "dependencies": {

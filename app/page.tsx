@@ -2,15 +2,19 @@
 
 import { useRouter } from 'next/navigation';
 import { RightArrow } from './Shared/icons';
+import { useCallback, useMemo } from 'react';
 
 export default function HomePage() {
     const router = useRouter();
-    const buttons = [
-        { label: 'Skills & Experience', href: '/Skills-Experience', icon: <RightArrow /> },
-        { label: 'Projects', href: '/Projects', icon: <RightArrow /> },
-        { label: 'Contact', href: '/Contact', icon: <RightArrow /> },
-        { label: 'View Resume', href: '/Resume', icon: <RightArrow /> },
-    ];
+    const buttons = useMemo(() => [
+        { label: 'Skills & Experience', href: '/Skills-Experience' },
+        { label: 'Projects', href: '/Projects' },
+        { label: 'Contact', href: '/Contact' },
+        { label: 'View Resume', href: '/Resume' },
+    ], []);
+    const handleClick = useCallback((href: string) => {
+        router.push(href);
+    }, [router]);
     return (
         <div className="container">
             <h1 className="title">Joshua Furber</h1>
@@ -24,21 +28,35 @@ export default function HomePage() {
                 Note: This website is still actively being worked on
             </p>
             <p className="description" style={{ fontSize: '0.85em' }}>
-                Some icons courtesy of <a href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noopener noreferrer">Freepik</a> from <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">Flaticon</a>
+                Some icons courtesy of{' '}
+                <a
+                    href="https://www.flaticon.com/authors/freepik"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    Freepik
+                    </a>{' '}
+                    from{' '}
+                    <a
+                    href="https://www.flaticon.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    Flaticon
+                </a>
             </p>
             <div className="buttonRow">
-                {buttons.map(({ label, href, icon}) =>
-                    (
-                        <button
-                            key={label}
-                            className="button"
-                            onClick={() => router.push(href)}
-                        >
-                            {label}
-                            {icon}
-                        </button>
-                    )
-                )}
+                {buttons.map(({ label, href }) => (
+                <button
+                    key={href}
+                    className="button"
+                    onClick={() => handleClick(href)}
+                    aria-label={`Navigate to ${label}`}
+                >
+                    {label}
+                    <RightArrow />
+                </button>
+                ))}
             </div>
         </div>
     );

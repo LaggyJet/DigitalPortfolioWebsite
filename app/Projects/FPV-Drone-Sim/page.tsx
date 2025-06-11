@@ -1,9 +1,9 @@
 'use client';
 
-export default function ESPGeoCachePage() {
+export default function FPVDroneSimPage() {
     return (
         <div className="container">
-            <h1 className="title" style={{ textDecoration: 'underline' }}>ESP GeoCache</h1>
+            <h1 className="title" style={{ textDecoration: 'underline' }}>FPV Drone Simulator</h1>
             {// Make sure to fill with actual vid
             <p className="description" style={{ textDecoration: 'underline' }}>Video Coming Soon</p>
             /* <div className="responsive-iframe-wrapper">
@@ -17,12 +17,11 @@ export default function ESPGeoCachePage() {
                 />
             </div> */}
             <ul className="list">
-                <li>Custom made GeoCache arduino that lets you use Latitude and Longitude to guide you</li>
-                <li>Soldered GeoCache modules together</li>
-                <li>Read in data packets from GPS module and parse data</li>
+                <li>Designed and built a drone simulation in Unreal Engine for real-time LiDAR scanning at dynamic points of interest.</li>
+                <li>Implemented scan data export for external visualization of 3D-mapped environments post-flight.</li>
                 <li>
                     <a
-                        href="https://github.com/LaggyJet/ESPGeoCache"
+                        href="https://github.com/LaggyJet/FPV-DroneSim"
                         className="link"
                         target="_blank"
                         rel="noopener noreferrer"
