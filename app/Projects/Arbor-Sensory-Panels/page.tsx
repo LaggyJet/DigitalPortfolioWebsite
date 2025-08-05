@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 
 const mainFile = "Final.png";
 const imageFiles = [
-    "PhysicalCoverLEDS.png",
+    "PhysicalCoverLEDs.png",
     "PhysicalSemiFinal.png", 
     "PhysicalMainSolder.png",
     "PCBDesign.png",
