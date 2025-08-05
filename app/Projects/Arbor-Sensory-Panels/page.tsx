@@ -1,21 +1,33 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
+
+const mainFile = "Final.png";
+const imageFiles = [
+    "PhysicalCoverLEDS.png",
+    "PhysicalSemiFinal.png", 
+    "PhysicalMainSolder.png",
+    "PCBDesign.png",
+    "SWMiddleUnder.png",
+    "SWBatteryClip.png",    
+    "SWTopUnderside.png",
+    "SWTopDownBase.png",
+    "UnityMain.png",
+    "UnitySettings.png",
+    "UnityAddUser.png",
+    "UnityUsers.png"
+];
+
 export default function ArborSensoryPanelsPage() {
+    const pathname = usePathname();
     return (
         <div className="container">
             <h1 className="title" style={{ textDecoration: 'underline' }}>Arbor Sensory Panels</h1>
-            {// Make sure to fill with actual vid
-            <p className="description" style={{ textDecoration: 'underline' }}>Video Coming Soon</p>
-            /* <div className="responsive-iframe-wrapper">
-                <iframe
-                    src="https://drive.google.com/file/d/1XCC311gdZKthu9LPcfaamjuV17aUrONC/preview"
-                    allow="encrypted-media"
-                    allowFullScreen
-                    title="Sensory Panel project video"
-                    loading="lazy"
-                    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                />
-            </div> */}
+            <img
+                className="mainImage"
+                src={`${pathname}/${mainFile}`}
+                loading="lazy"
+            />
             <ul className="list">
                 <li>A fully custom designed Sensory Panel for Neurodivergent kids.</li>
                 <li>Designed a custom Arduino Library for other panels to share settings each other.</li>
@@ -28,11 +40,23 @@ export default function ArborSensoryPanelsPage() {
                         className="link"
                         target="_blank"
                         rel="noopener noreferrer"
-                    >
+                        >
                         Check The Repo
                     </a>
                 </li>
             </ul>
+            <h1 className="title" style={{ textDecoration: 'underline' }}>Gallery</h1>
+            <div className="galleryGrid">
+                {imageFiles.map((filename, i) => (
+                    <img
+                        key={i}
+                        src={`${pathname}/${filename}`}
+                        alt={`Image ${i + 1}`}
+                        className="galleryImage"
+                        loading="lazy"
+                    />
+                ))}   
+            </div>
         </div>
     );
 }

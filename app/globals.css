@@ -232,6 +232,19 @@ body.animating {
     @apply text-white font-bold text-[1.6rem] mb-[0.5vw] text-center;
 }
 
+.mainImage {
+    @apply w-full h-auto object-cover rounded-lg max-w-[585px] mx-auto mb-8 mt-4;
+}
+
+.galleryGrid {
+    @apply grid grid-cols-2 gap-10 place-items-center my-5
+}
+
+.galleryImage {
+    @apply max-h-[500px] w-auto border-2 rounded shadow-lg bg-black;
+    object-fit: contain;
+}
+
 @media (max-width: 600px) {
     .iconRow {
         @apply gap-4 mt-4;
@@ -319,6 +332,10 @@ body.animating {
         font-size: 1.25rem !important;
         margin-bottom: 0.5rem !important;
         text-align: center !important;
+    }
+
+    .galleryGrid {
+        @apply grid-cols-1
     }
 }
 
