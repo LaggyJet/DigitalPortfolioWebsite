@@ -1,4 +1,12 @@
 {
+  "Action-Flight-Sim": {
+    "mainFocus": "Software Engineering",
+    "tags": [
+      "Unity",
+      "C#",
+      "Arduino"
+    ]
+  },
   "Arbor-Sensory-Panels": {
     "mainFocus": "Fabrication & Parts Design",
     "tags": [
@@ -12,7 +20,7 @@
   "Data-Visualizer": {
     "mainFocus": "Software Engineering",
     "tags": [
-      "C++",
+      "Python",
       "Networking"
     ]
   },
@@ -35,14 +43,6 @@
     "tags": [
       "Unreal Engine",
       "C++"
-    ]
-  },
-  "FS-Flight-Sim": {
-    "mainFocus": "Software Engineering",
-    "tags": [
-      "Unity",
-      "C#",
-      "Arduino"
     ]
   },
   "Motion-Base-Shuttle-Simulator": {

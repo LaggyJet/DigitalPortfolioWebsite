@@ -21,7 +21,7 @@ const LogoImage: React.FC<{ src: string; alt: string } & LogoProps> = ({ src, al
 export const DTDragonsLogo = (props: LogoProps) => <LogoImage src="/logos/DTDragons.png" alt="DT Dragons Logo" {...props} />;
 export const StewartPlatformLogo = (props: LogoProps) => <LogoImage src="/logos/StewartPlatform.png" alt="Stewart Platform Logo" {...props} />;
 export const TheGrittyLogo = (props: LogoProps) => <LogoImage src="/logos/TheGritty.png" alt="The Gritty Logo" {...props} />;
-export const FSFlightSimLogo = (props: LogoProps) => <LogoImage src="/logos/FSFlightSim.png" alt="FS Flight Sim Logo" {...props} />;
+export const ActionFlightSimLogo = (props: LogoProps) => <LogoImage src="/logos/ActionFlightSim.png" alt="Action Flight Sim Logo" {...props} />;
 export const ArborSensoryPanelsLogo = (props: LogoProps) => <LogoImage src="/logos/ArborSensoryPanels.png" alt="Arbor Sensory Panels Logo" {...props} />;
 export const SimonSenseLogo = (props: LogoProps) => <LogoImage src="/logos/SimonSense.png" alt="Simon Sense Logo" {...props} />;
 export const ESPGeoCacheLogo = (props: LogoProps) => <LogoImage src="/logos/ESPGeoCache.png" alt="ESP GeoCache Logo" {...props} />;
