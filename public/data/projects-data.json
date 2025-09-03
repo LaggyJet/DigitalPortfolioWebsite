@@ -21,7 +21,8 @@
     "mainFocus": "Software Engineering",
     "tags": [
       "Python",
-      "Networking"
+      "Networking",
+      "Qt Creator"
     ]
   },
   "DT-Dragons": {
@@ -68,6 +69,14 @@
       "SolidWorks",
       "Eagle",
       "Networking"
+    ]
+  },
+  "TCP-Messaging-App": {
+    "mainFocus": "Software Engineering",
+    "tags": [
+      "Networking",
+      "C++",
+      "Qt Creator"
     ]
   },
   "The-Gritty": {

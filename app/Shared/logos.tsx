@@ -28,3 +28,4 @@ export const ESPGeoCacheLogo = (props: LogoProps) => <LogoImage src="/logos/ESPG
 export const MotionBaseShuttleSimulatorLogo = (props: LogoProps) => <LogoImage src="/logos/MotionBaseShuttleSimulator.png" alt="Motion Base Shuttle Simulator" {...props} />;
 export const DataVisualizerLogo = (props: LogoProps) => <LogoImage src="/logos/DataVisualizer.png" alt="Data Visualizer" {...props} />;
 export const FPVDroneSimLogo = (props: LogoProps) => <LogoImage src="/logos/FPVDroneSim.png" alt="FPV Drone Simulator" {...props} />;
+export const TCPMessagingAppLogo = (props: LogoProps) => <LogoImage src="/logos/TCPMessagingApp.png" alt="TCP Messaging App" {...props} />;

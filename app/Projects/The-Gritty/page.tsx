@@ -46,7 +46,11 @@ export default function TheGrittyPage() {
                     Check The Repo
                 </a>,
             ]}
-            galleryImages={[]}
+            galleryImages={[
+                "Main.png",
+                "SkillTree.png",
+                "Fight.png"
+            ]}
         />
     );
 }

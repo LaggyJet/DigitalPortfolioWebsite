@@ -1,5 +1,5 @@
 Software Engineering
 
-Python
 Networking
+C++
 Qt Creator

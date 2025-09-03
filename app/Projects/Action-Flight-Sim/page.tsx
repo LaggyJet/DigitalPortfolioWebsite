@@ -23,6 +23,7 @@ export default function ActionFlightSimPage() {
                 "Supports Mouse+Keyboard, Xbox, and Joystick inputs",
                 "Custom Scoring Logic based off time during course and accuracy on the landing pad",
                 "Connected custom made motion platform via bluetooth to have similar movements to the helicopter ingame",
+                "Combined with a similar flight sim to add more choices for experience",
                 <a
                     href="https://github.com/LaggyJet/Action-Flight-Sim"
                     className="link"
@@ -33,7 +34,8 @@ export default function ActionFlightSimPage() {
                 </a>
             ]}
             galleryImages={[
-                
+                "Start.png",
+                "Win.png"
             ]}
         />
     );
